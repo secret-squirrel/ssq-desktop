@@ -1,7 +1,6 @@
 {
   "name": "PMS",
   "main": "index.html",
-  "node-main": "pms-gui.js",
   "description": "Desktop app for PMS",
   "version": "0.0.1",
   "keywords": ["PMS", "TWG", "password", "management", "system"],
