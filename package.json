@@ -1,4 +1,36 @@
 {
-  "name": "nw-demo",
-  "main": "index.html"
+  "name": "PMS",
+  "main": "index.html",
+  "node-main": "pms-gui.js",
+  "description": "Desktop app for PMS",
+  "version": "0.0.1",
+  "keywords": ["PMS", "TWG", "password", "management", "system"],
+  "maintainers": [
+    {
+      "name": "Brian Gilham",
+      "email": "brian@twg.ca",
+      "web": "http://twg.ca"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Brian Gilham",
+      "email": "brian@twg.ca",
+      "web": "http://twg.ca"
+    }
+  ],
+  "bugs": "https://github.com/twg/pms-gui",
+  "window": {
+    "title": "PMS",
+    "toolbar": false,
+    "frame": true,
+    "width": 400,
+    "height": 600,
+    "position": "center",
+    "min_width": 400,
+    "min_height": 600
+  },
+  "webkit": {
+    "plugin": true
+  }
 }
