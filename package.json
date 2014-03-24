@@ -3,7 +3,13 @@
   "main": "index.html",
   "description": "Desktop app for PMS",
   "version": "0.0.1",
-  "keywords": ["PMS", "TWG", "password", "management", "system"],
+  "keywords": [
+    "PMS",
+    "TWG",
+    "password",
+    "management",
+    "system"
+  ],
   "maintainers": [
     {
       "name": "Brian Gilham",
@@ -31,5 +37,8 @@
   },
   "webkit": {
     "plugin": true
+  },
+  "devDependencies": {
+    "grunt-ember-handlebars": "~0.8.0"
   }
 }
