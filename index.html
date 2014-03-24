@@ -29,5 +29,14 @@
     <script>
       $(document).foundation();
     </script>
+    <script>
+      var path = './';
+      var fs = require('fs');
+      fs.watch(path, [], function() {
+        if(location){
+          location.reload();
+        }
+      });
+    </script>
   </body>
 </html>
