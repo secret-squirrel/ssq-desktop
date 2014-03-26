@@ -13,6 +13,8 @@
 
 * `git clone git@github.com:twg/secretsquirrel-desktop.git && cd secretsquirrel-desktop`
 * `npm install`
+* `npm install -g bower` and `npm install -g gulp` if you don't already have
+  them installed globally.
 * `bower install`
 * **Tab-1** - `gulp` - starts to compile javascript, templates, and styles.
 * **Tab-2** - `./node-webkit.app/Contents/MacOS/node-webkit pms.nw` - starts the node-webkit app. (or `npm start`)
