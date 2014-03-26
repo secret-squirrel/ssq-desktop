@@ -13,8 +13,8 @@
 * `git clone git@github.com:twg/pms-gui.git && cd pms-gui`
 * `npm install`
 * `bower install`
-* `gulp` - starts to compile javascript, templates, and styles.
-* `./node-webkit.app/Contents/MacOS/node-webkit pms.nw` - starts the node-webkit app.
+* **Tab-1** - `gulp` - starts to compile javascript, templates, and styles.
+* **Tab-2** - `./node-webkit.app/Contents/MacOS/node-webkit pms.nw` - starts the node-webkit app. (or `npm start`)
 
 ## Architecture Brief
 
@@ -26,3 +26,8 @@ This project is built using [node-webkit](https://github.com/rogerwang/node-webk
 * [Ember Canary](http://emberjs.com/builds/)
 * [Stylus](http://learnboost.github.io/stylus/)
 * [Gulp](http://gulpjs.com/)
+
+## Troubleshooting
+
+* **EMFILE Error** - The default limit for open files in OSX is 256. This is quite low and can cause issues during file compliation. To fix this issue, run the command: `ulimit -n 10240`
+* **Manually Restart** - You should be able to just `touch restart.txt`

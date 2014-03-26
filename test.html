@@ -1,9 +1,9 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PMS</title>
+    <title>PMS Tests</title>
     <script>
       Ember = {};
       Ember.TEMPLATES = {};
@@ -17,18 +17,6 @@
     <script src="build/js/app.js"></script>
   </head>
   <body>
-
-    <!-- Autoreload -->
-    <script>
-      var path = './restart.txt';
-      var fs = require('fs');
-      fs.watchFile(path, [], function() {
-        setTimeout(function() {
-          if (location) {
-            location.reload(false);
-          }
-        }, 200);
-      });
-    </script>
+    <h1>qUnit Tests</h1>
   </body>
 </html>

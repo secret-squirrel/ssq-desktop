@@ -15,7 +15,7 @@ function program3(depth0,data) {
   data.buffer.push("Index");
   }
 
-  data.buffer.push("<h1>PMS</h1>\n\n<nav>\n  <ul>\n    ");
+  data.buffer.push("<header>\n  <h1>PMS GUI</h1>\n</header>\n\n<nav>\n  <ul>\n    ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'tagName': ("li")
   },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "styleguide", options) : helperMissing.call(depth0, "link-to", "styleguide", options));
@@ -37,7 +37,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 
 
-  data.buffer.push("<h1>Index</h1>");
+  data.buffer.push("<h1>Index</h1>\n");
   
 });
 Ember.TEMPLATES["styleguide"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {

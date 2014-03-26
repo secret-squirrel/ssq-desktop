@@ -17,6 +17,9 @@
       "web": "http://twg.ca"
     }
   ],
+  "scripts": {
+    "start": "./node-webkit.app/Contents/MacOS/node-webkit pms.nw"
+  },
   "contributors": [
     {
       "name": "Brian Gilham",
@@ -51,6 +54,7 @@
     "gulp-watch": "^0.5.3",
     "gaze": "^0.5.1",
     "gulp-continuous-concat": "^0.1.1",
-    "gulp-stylus": "^0.1.0"
+    "gulp-stylus": "^0.1.0",
+    "gulp-shell": "^0.2.4"
   }
 }

@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var handlebars = require('gulp-ember-handlebars');
 var stylus = require('gulp-stylus');
+var shell = require('gulp-shell');
 
 var paths = {
   scripts: ['app/**/*.js'],
@@ -14,7 +15,8 @@ var paths = {
 gulp.task('scripts', function() {
   return gulp.src(paths.scripts)
     .pipe(concat('app.js'))
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('build/js'))
+    .pipe(shell(['touch restart.txt']));
 });
 
 //-- Compile and concat all templates to build/js/templates.js
@@ -25,7 +27,8 @@ gulp.task('templates', function() {
       templateRoot: false
     }))
     .pipe(concat('templates.js'))
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('build/js'))
+    .pipe(shell(['touch restart.txt']));
 });
 
 //-- Compile our Stylus files to app.css
@@ -33,7 +36,8 @@ gulp.task('styles', function() {
   return gulp.src(paths.styles)
     .pipe(stylus())
     .pipe(concat('app.css'))
-    .pipe(gulp.dest('build/css'));
+    .pipe(gulp.dest('build/css'))
+    .pipe(shell(['touch restart.txt']));
 });
 
 //-- Watch our paths and run our tasks

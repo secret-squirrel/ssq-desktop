@@ -1,4 +1,3 @@
-@import "initializers/vendor/normalize.css";
 .grid {
   list-style: none;
 /* [1] */
@@ -729,9 +728,30 @@
     width: 91.66666666666666%;
   }
 }
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+}
 
 
 
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+}
 
 /*------------------------------------*     $CSSWIZARDRY-GRIDS
 \*------------------------------------*/
