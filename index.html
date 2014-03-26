@@ -4,38 +4,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PMS</title>
-    <link rel="stylesheet" href="foundation.min.css" />
-    <script src="vendor/modernizr.js"></script>
+    <script>
+      Ember = {};
+      Ember.TEMPLATES = {};
+    </script>
+    <link rel="stylesheet" type="text/css" href="build/css/app.css">
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/handlebars/handlebars.js"></script>
+    <script src="vendor/ember/index.js"></script>
+    <script src="vendor/ember-data/index.js"></script>
+    <script src="build/js/templates.js"></script>
+    <script src="build/js/app.js"></script>
   </head>
   <body>
-    <script>
-      
-    </script>
-    
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="" style="cursor: default;">PMS</a></h1>
-        </li>
-      </ul>
-    </nav>
 
-    <div id="output">
-
-    </div>
-    
-    <script src="vendor/jquery.js"></script>
-    <script src="foundation.min.js"></script>
+    <!-- Autoreload -->
     <script>
-      $(document).foundation();
-    </script>
-    <script>
-      var path = './';
-      var fs = require('fs');
-      fs.watch(path, [], function() {
-        if(location){
-          location.reload();
-        }
+      var Gaze = require('gaze').Gaze;
+      var gaze = new Gaze('**/*');
+      gaze.on('all', function(event, filepath) {
+        setTimeout(function() {
+          if (location) {
+            location.reload();
+          }
+        }, 1000)
       });
     </script>
   </body>

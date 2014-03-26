@@ -27,7 +27,7 @@
   "bugs": "https://github.com/twg/pms-gui",
   "window": {
     "title": "PMS",
-    "toolbar": false,
+    "toolbar": true,
     "frame": true,
     "width": 400,
     "height": 600,
@@ -39,6 +39,18 @@
     "plugin": true
   },
   "devDependencies": {
-    "grunt-ember-handlebars": "~0.8.0"
+    "grunt-ember-handlebars": "~0.8.0",
+    "grunt": "~0.4.2",
+    "grunt-cli": "~0.1.9",
+    "grunt-contrib-watch": "~0.5.3",
+    "connect-livereload": "~0.3.1",
+    "grunt-contrib-stylus": "~0.13.2",
+    "gulp-ember-handlebars": "^0.6.0",
+    "gulp": "^3.5.6",
+    "gulp-concat": "^2.2.0",
+    "gulp-watch": "^0.5.3",
+    "gaze": "^0.5.1",
+    "gulp-continuous-concat": "^0.1.1",
+    "gulp-stylus": "^0.1.0"
   }
 }
