@@ -17,6 +17,10 @@
 * **Tab-1** - `gulp` - starts to compile javascript, templates, and styles.
 * **Tab-2** - `./node-webkit.app/Contents/MacOS/node-webkit pms.nw` - starts the node-webkit app. (or `npm start`)
 
+## Running Tests (TODO)
+
+* With the toolbar enabeled (`package.json`), manually visit `/test.html`
+
 ## Architecture Brief
 
 This project is built using [node-webkit](https://github.com/rogerwang/node-webkit), the same framework that Github used to build their [Atom](http://atom.io) editor. The actual application code is written on top of [Ember.js](http://emberjs.com), which is specifically designed for long-running applications. In order to compile everything properly, we've tapped [Gulp.js](http://gulpjs.com), which is faster than Grunt.
