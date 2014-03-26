@@ -1,0 +1,1626 @@
+.grid {
+  list-style: none;
+/* [1] */
+  margin: 0;
+/* [2] */
+  padding: 0;
+/* [2] */
+  margin-left: -24px;
+/* [3] */
+  letter-spacing: -0.31em;
+}
+.opera:-o-prefocus,
+.grid {
+  word-spacing: -0.43em;
+}
+.grid__item {
+  display: inline-block;
+/* [1] */
+  padding-left: 24px;
+/* [2] */
+  vertical-align: top;
+/* [3] */
+  width: 100%;
+/* [4] */
+  -webkit-box-sizing: border-box;
+/* [5] */
+  -moz-box-sizing: border-box;
+/* [5] */
+  box-sizing: border-box;
+/* [5] */
+  position: relative;
+  letter-spacing: normal;
+}
+.grid--rev {
+  direction: rtl;
+  text-align: left;
+}
+.grid--rev > .grid__item {
+  direction: ltr;
+  text-align: left;
+}
+.grid--full {
+  margin-left: 0;
+}
+.grid--full > .grid__item {
+  padding-left: 0;
+}
+.grid--right {
+  text-align: right;
+}
+.grid--right > .grid__item {
+  text-align: left;
+}
+.grid--center {
+  text-align: center;
+}
+.grid--center > .grid__item {
+  text-align: left;
+}
+.grid--middle > .grid__item {
+  vertical-align: middle;
+}
+.grid--bottom > .grid__item {
+  vertical-align: bottom;
+}
+.grid--narrow {
+  margin-left: -12px;
+}
+.grid--narrow > .grid__item {
+  padding-left: 12px;
+}
+.grid--wide {
+  margin-left: -48px;
+}
+.grid--wide > .grid__item {
+  padding-left: 48px;
+}
+.one-whole {
+  width: 100%;
+}
+.one-half {
+  width: 50%;
+}
+.one-third {
+  width: 33.33333333333333%;
+}
+.two-thirds {
+  width: 66.66666666666666%;
+}
+.one-quarter {
+  width: 25%;
+}
+.two-quarters {
+  width: 50%;
+}
+.three-quarters {
+  width: 75%;
+}
+.one-fifth {
+  width: 20%;
+}
+.two-fifths {
+  width: 40%;
+}
+.three-fifths {
+  width: 60%;
+}
+.four-fifths {
+  width: 80%;
+}
+.one-sixth {
+  width: 16.666666666666664%;
+}
+.two-sixths {
+  width: 33.33333333333333%;
+}
+.three-sixths {
+  width: 50%;
+}
+.four-sixths {
+  width: 66.66666666666666%;
+}
+.five-sixths {
+  width: 83.33333333333334%;
+}
+.one-eighth {
+  width: 12.5%;
+}
+.two-eighths {
+  width: 25%;
+}
+.three-eighths {
+  width: 37.5%;
+}
+.four-eighths {
+  width: 50%;
+}
+.five-eighths {
+  width: 62.5%;
+}
+.six-eighths {
+  width: 75%;
+}
+.seven-eighths {
+  width: 87.5%;
+}
+.one-tenth {
+  width: 10%;
+}
+.two-tenths {
+  width: 20%;
+}
+.three-tenths {
+  width: 30%;
+}
+.four-tenths {
+  width: 40%;
+}
+.five-tenths {
+  width: 50%;
+}
+.six-tenths {
+  width: 60%;
+}
+.seven-tenths {
+  width: 70%;
+}
+.eight-tenths {
+  width: 80%;
+}
+.nine-tenths {
+  width: 90%;
+}
+.one-twelfth {
+  width: 8.333333333333332%;
+}
+.two-twelfths {
+  width: 16.666666666666664%;
+}
+.three-twelfths {
+  width: 25%;
+}
+.four-twelfths {
+  width: 33.33333333333333%;
+}
+.five-twelfths {
+  width: 41.66666666666667%;
+}
+.six-twelfths {
+  width: 50%;
+}
+.seven-twelfths {
+  width: 58.333333333333336%;
+}
+.eight-twelfths {
+  width: 66.66666666666666%;
+}
+.nine-twelfths {
+  width: 75%;
+}
+.ten-twelfths {
+  width: 83.33333333333334%;
+}
+.eleven-twelfths {
+  width: 91.66666666666666%;
+}
+@media (max-width: 480px) {
+  .palm-one-whole {
+    width: 100%;
+  }
+  .palm-one-half {
+    width: 50%;
+  }
+  .palm-one-third {
+    width: 33.33333333333333%;
+  }
+  .palm-two-thirds {
+    width: 66.66666666666666%;
+  }
+  .palm-one-quarter {
+    width: 25%;
+  }
+  .palm-two-quarters {
+    width: 50%;
+  }
+  .palm-three-quarters {
+    width: 75%;
+  }
+  .palm-one-fifth {
+    width: 20%;
+  }
+  .palm-two-fifths {
+    width: 40%;
+  }
+  .palm-three-fifths {
+    width: 60%;
+  }
+  .palm-four-fifths {
+    width: 80%;
+  }
+  .palm-one-sixth {
+    width: 16.666666666666664%;
+  }
+  .palm-two-sixths {
+    width: 33.33333333333333%;
+  }
+  .palm-three-sixths {
+    width: 50%;
+  }
+  .palm-four-sixths {
+    width: 66.66666666666666%;
+  }
+  .palm-five-sixths {
+    width: 83.33333333333334%;
+  }
+  .palm-one-eighth {
+    width: 12.5%;
+  }
+  .palm-two-eighths {
+    width: 25%;
+  }
+  .palm-three-eighths {
+    width: 37.5%;
+  }
+  .palm-four-eighths {
+    width: 50%;
+  }
+  .palm-five-eighths {
+    width: 62.5%;
+  }
+  .palm-six-eighths {
+    width: 75%;
+  }
+  .palm-seven-eighths {
+    width: 87.5%;
+  }
+  .palm-one-tenth {
+    width: 10%;
+  }
+  .palm-two-tenths {
+    width: 20%;
+  }
+  .palm-three-tenths {
+    width: 30%;
+  }
+  .palm-four-tenths {
+    width: 40%;
+  }
+  .palm-five-tenths {
+    width: 50%;
+  }
+  .palm-six-tenths {
+    width: 60%;
+  }
+  .palm-seven-tenths {
+    width: 70%;
+  }
+  .palm-eight-tenths {
+    width: 80%;
+  }
+  .palm-nine-tenths {
+    width: 90%;
+  }
+  .palm-one-twelfth {
+    width: 8.333333333333332%;
+  }
+  .palm-two-twelfths {
+    width: 16.666666666666664%;
+  }
+  .palm-three-twelfths {
+    width: 25%;
+  }
+  .palm-four-twelfths {
+    width: 33.33333333333333%;
+  }
+  .palm-five-twelfths {
+    width: 41.66666666666667%;
+  }
+  .palm-six-twelfths {
+    width: 50%;
+  }
+  .palm-seven-twelfths {
+    width: 58.333333333333336%;
+  }
+  .palm-eight-twelfths {
+    width: 66.66666666666666%;
+  }
+  .palm-nine-twelfths {
+    width: 75%;
+  }
+  .palm-ten-twelfths {
+    width: 83.33333333333334%;
+  }
+  .palm-eleven-twelfths {
+    width: 91.66666666666666%;
+  }
+}
+@media (min-width: 481px) and (max-width: 1023px) {
+  .lap-one-whole {
+    width: 100%;
+  }
+  .lap-one-half {
+    width: 50%;
+  }
+  .lap-one-third {
+    width: 33.33333333333333%;
+  }
+  .lap-two-thirds {
+    width: 66.66666666666666%;
+  }
+  .lap-one-quarter {
+    width: 25%;
+  }
+  .lap-two-quarters {
+    width: 50%;
+  }
+  .lap-three-quarters {
+    width: 75%;
+  }
+  .lap-one-fifth {
+    width: 20%;
+  }
+  .lap-two-fifths {
+    width: 40%;
+  }
+  .lap-three-fifths {
+    width: 60%;
+  }
+  .lap-four-fifths {
+    width: 80%;
+  }
+  .lap-one-sixth {
+    width: 16.666666666666664%;
+  }
+  .lap-two-sixths {
+    width: 33.33333333333333%;
+  }
+  .lap-three-sixths {
+    width: 50%;
+  }
+  .lap-four-sixths {
+    width: 66.66666666666666%;
+  }
+  .lap-five-sixths {
+    width: 83.33333333333334%;
+  }
+  .lap-one-eighth {
+    width: 12.5%;
+  }
+  .lap-two-eighths {
+    width: 25%;
+  }
+  .lap-three-eighths {
+    width: 37.5%;
+  }
+  .lap-four-eighths {
+    width: 50%;
+  }
+  .lap-five-eighths {
+    width: 62.5%;
+  }
+  .lap-six-eighths {
+    width: 75%;
+  }
+  .lap-seven-eighths {
+    width: 87.5%;
+  }
+  .lap-one-tenth {
+    width: 10%;
+  }
+  .lap-two-tenths {
+    width: 20%;
+  }
+  .lap-three-tenths {
+    width: 30%;
+  }
+  .lap-four-tenths {
+    width: 40%;
+  }
+  .lap-five-tenths {
+    width: 50%;
+  }
+  .lap-six-tenths {
+    width: 60%;
+  }
+  .lap-seven-tenths {
+    width: 70%;
+  }
+  .lap-eight-tenths {
+    width: 80%;
+  }
+  .lap-nine-tenths {
+    width: 90%;
+  }
+  .lap-one-twelfth {
+    width: 8.333333333333332%;
+  }
+  .lap-two-twelfths {
+    width: 16.666666666666664%;
+  }
+  .lap-three-twelfths {
+    width: 25%;
+  }
+  .lap-four-twelfths {
+    width: 33.33333333333333%;
+  }
+  .lap-five-twelfths {
+    width: 41.66666666666667%;
+  }
+  .lap-six-twelfths {
+    width: 50%;
+  }
+  .lap-seven-twelfths {
+    width: 58.333333333333336%;
+  }
+  .lap-eight-twelfths {
+    width: 66.66666666666666%;
+  }
+  .lap-nine-twelfths {
+    width: 75%;
+  }
+  .lap-ten-twelfths {
+    width: 83.33333333333334%;
+  }
+  .lap-eleven-twelfths {
+    width: 91.66666666666666%;
+  }
+}
+@media (max-width: 1023px) {
+  .portable-one-whole {
+    width: 100%;
+  }
+  .portable-one-half {
+    width: 50%;
+  }
+  .portable-one-third {
+    width: 33.33333333333333%;
+  }
+  .portable-two-thirds {
+    width: 66.66666666666666%;
+  }
+  .portable-one-quarter {
+    width: 25%;
+  }
+  .portable-two-quarters {
+    width: 50%;
+  }
+  .portable-three-quarters {
+    width: 75%;
+  }
+  .portable-one-fifth {
+    width: 20%;
+  }
+  .portable-two-fifths {
+    width: 40%;
+  }
+  .portable-three-fifths {
+    width: 60%;
+  }
+  .portable-four-fifths {
+    width: 80%;
+  }
+  .portable-one-sixth {
+    width: 16.666666666666664%;
+  }
+  .portable-two-sixths {
+    width: 33.33333333333333%;
+  }
+  .portable-three-sixths {
+    width: 50%;
+  }
+  .portable-four-sixths {
+    width: 66.66666666666666%;
+  }
+  .portable-five-sixths {
+    width: 83.33333333333334%;
+  }
+  .portable-one-eighth {
+    width: 12.5%;
+  }
+  .portable-two-eighths {
+    width: 25%;
+  }
+  .portable-three-eighths {
+    width: 37.5%;
+  }
+  .portable-four-eighths {
+    width: 50%;
+  }
+  .portable-five-eighths {
+    width: 62.5%;
+  }
+  .portable-six-eighths {
+    width: 75%;
+  }
+  .portable-seven-eighths {
+    width: 87.5%;
+  }
+  .portable-one-tenth {
+    width: 10%;
+  }
+  .portable-two-tenths {
+    width: 20%;
+  }
+  .portable-three-tenths {
+    width: 30%;
+  }
+  .portable-four-tenths {
+    width: 40%;
+  }
+  .portable-five-tenths {
+    width: 50%;
+  }
+  .portable-six-tenths {
+    width: 60%;
+  }
+  .portable-seven-tenths {
+    width: 70%;
+  }
+  .portable-eight-tenths {
+    width: 80%;
+  }
+  .portable-nine-tenths {
+    width: 90%;
+  }
+  .portable-one-twelfth {
+    width: 8.333333333333332%;
+  }
+  .portable-two-twelfths {
+    width: 16.666666666666664%;
+  }
+  .portable-three-twelfths {
+    width: 25%;
+  }
+  .portable-four-twelfths {
+    width: 33.33333333333333%;
+  }
+  .portable-five-twelfths {
+    width: 41.66666666666667%;
+  }
+  .portable-six-twelfths {
+    width: 50%;
+  }
+  .portable-seven-twelfths {
+    width: 58.333333333333336%;
+  }
+  .portable-eight-twelfths {
+    width: 66.66666666666666%;
+  }
+  .portable-nine-twelfths {
+    width: 75%;
+  }
+  .portable-ten-twelfths {
+    width: 83.33333333333334%;
+  }
+  .portable-eleven-twelfths {
+    width: 91.66666666666666%;
+  }
+}
+@media (min-width: 1024px) {
+  .desk-one-whole {
+    width: 100%;
+  }
+  .desk-one-half {
+    width: 50%;
+  }
+  .desk-one-third {
+    width: 33.33333333333333%;
+  }
+  .desk-two-thirds {
+    width: 66.66666666666666%;
+  }
+  .desk-one-quarter {
+    width: 25%;
+  }
+  .desk-two-quarters {
+    width: 50%;
+  }
+  .desk-three-quarters {
+    width: 75%;
+  }
+  .desk-one-fifth {
+    width: 20%;
+  }
+  .desk-two-fifths {
+    width: 40%;
+  }
+  .desk-three-fifths {
+    width: 60%;
+  }
+  .desk-four-fifths {
+    width: 80%;
+  }
+  .desk-one-sixth {
+    width: 16.666666666666664%;
+  }
+  .desk-two-sixths {
+    width: 33.33333333333333%;
+  }
+  .desk-three-sixths {
+    width: 50%;
+  }
+  .desk-four-sixths {
+    width: 66.66666666666666%;
+  }
+  .desk-five-sixths {
+    width: 83.33333333333334%;
+  }
+  .desk-one-eighth {
+    width: 12.5%;
+  }
+  .desk-two-eighths {
+    width: 25%;
+  }
+  .desk-three-eighths {
+    width: 37.5%;
+  }
+  .desk-four-eighths {
+    width: 50%;
+  }
+  .desk-five-eighths {
+    width: 62.5%;
+  }
+  .desk-six-eighths {
+    width: 75%;
+  }
+  .desk-seven-eighths {
+    width: 87.5%;
+  }
+  .desk-one-tenth {
+    width: 10%;
+  }
+  .desk-two-tenths {
+    width: 20%;
+  }
+  .desk-three-tenths {
+    width: 30%;
+  }
+  .desk-four-tenths {
+    width: 40%;
+  }
+  .desk-five-tenths {
+    width: 50%;
+  }
+  .desk-six-tenths {
+    width: 60%;
+  }
+  .desk-seven-tenths {
+    width: 70%;
+  }
+  .desk-eight-tenths {
+    width: 80%;
+  }
+  .desk-nine-tenths {
+    width: 90%;
+  }
+  .desk-one-twelfth {
+    width: 8.333333333333332%;
+  }
+  .desk-two-twelfths {
+    width: 16.666666666666664%;
+  }
+  .desk-three-twelfths {
+    width: 25%;
+  }
+  .desk-four-twelfths {
+    width: 33.33333333333333%;
+  }
+  .desk-five-twelfths {
+    width: 41.66666666666667%;
+  }
+  .desk-six-twelfths {
+    width: 50%;
+  }
+  .desk-seven-twelfths {
+    width: 58.333333333333336%;
+  }
+  .desk-eight-twelfths {
+    width: 66.66666666666666%;
+  }
+  .desk-nine-twelfths {
+    width: 75%;
+  }
+  .desk-ten-twelfths {
+    width: 83.33333333333334%;
+  }
+  .desk-eleven-twelfths {
+    width: 91.66666666666666%;
+  }
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+}
+
+
+
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+}
+
+/*------------------------------------*     $CSSWIZARDRY-GRIDS
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * INTRODUCTION.........How the grid system works.
+ * VARIABLES............Your settings.
+ * MIXINS...............Library mixins.
+ * GRID SETUP...........Build the grid structure.
+ * WIDTHS...............Build our responsive widths around our breakpoints.
+ * PUSH.................Push classes.
+ * PULL.................Pull classes.
+ */
+/*------------------------------------*     $INTRODUCTION
+\*------------------------------------*/
+/**
+ * csswizardry grids provides you with widths to suit a number of breakpoints
+ * designed around devices of a size you specify. Out of the box, csswizardry
+ * grids caters to the following types of device:
+ *
+ * palm     --  palm-based devices, like phones and small tablets
+ * lap      --  lap-based devices, like iPads or laptops
+ * portable --  all of the above
+ * desk     --  stationary devices, like desktop computers
+ * regular  --  any/all types of device
+ *
+ * These namespaces are then used in the library to give you the ability to
+ * manipulate your layouts based around them, for example:
+ *
+   <div class="grid__item  one-whole  lap--one-half  desk--one-third">
+ *
+ * This would give you a grid item which is 100% width unless it is on a lap
+ * device, at which point it become 50% wide, or it is on a desktop device, at
+ * which point it becomes 33.333% width.
+ *
+ * csswizardry grids also has push and pull classes which allow you to nudge
+ * grid items left and right by a defined amount. These follow the same naming
+ * convention as above, but are prepended by either `push--` or `pull--`, for
+ * example:
+ *
+   `class="grid__item  one-half  push--one-half"`
+ *
+ * This would give you a grid item which is 50% width and pushed over to the
+ * right by 50%.
+ *
+ * All classes in csswizardry grids follow this patten, so you should fairly
+ * quickly be able to piece together any combinations you can imagine, for
+ * example:
+ *
+   `class="grid__item  one-whole  lap--one-half  desk--one-third  push--desk--one-third"`
+ *
+   `class="grid__item  one-quarter  palm--one-half  push--palm--one-half"`
+ *
+   `class="grid__item  palm--one-third  desk--five-twelfths"`
+ */
+/*------------------------------------*     $VARIABLES
+\*------------------------------------*/
+/**
+ * If you are building a non-responsive site but would still like to use
+ * csswizardry-grids, set this to false:
+ */
+/**
+ * Is this build mobile first? Setting to true means that all grids will be 100%
+ * width if you do not apply a more specific class to them.
+ */
+/**
+ * Set the spacing between your grid items.
+ */
+/**
+ * Would you like Sassâ€™ silent classes, or regular CSS classes?
+ */
+/**
+ * Would you like push and pull classes enabled?
+ */
+/**
+ * Use floats instead of display: inline-block?
+ */
+/**
+ * Using `inline-block` means that the grid items need their whitespace removing
+ * in order for them to work correctly. Set the following to true if you are
+ * going to achieve this by manually removing/commenting out any whitespace in
+ * your HTML yourself.
+ *
+ * Setting this to false invokes a hack which cannot always be guaranteed,
+ * please see the following for more detail:
+ *
+ * github.com/csswizardry/csswizardry-grids/commit/744d4b23c9d2b77d605b5991e54a397df72e0688
+ * github.com/csswizardry/inuit.css/issues/170#issuecomment-14859371
+ */
+/**
+ * Define your breakpoints. The first value is the prefix that shall be used for
+ * your classes (e.g. `.palm--one-half`), the second value is the media query
+ * that the breakpoint fires at.
+ */
+/**
+ * Define which namespaced breakpoints you would like to generate for each of
+ * widths, push and pull. This is handy if you only need pull on, say, desk, or
+ * you only need a new width breakpoint at mobile sizes. It allows you to only
+ * compile as much CSS as you need. All are turned on by default, but you can
+ * add and remove breakpoints at will.
+ *
+ * Push and pull shall only be used if `$push` and/or `$pull` and `$responsive`
+ * have been set to â€˜trueâ€™.
+ */
+/**
+ * If you don't like the default class names, you can customize them here.
+ */
+/**
+ * You do not need to edit anything from this line onward; csswizardry-grids is
+ * good to go. Happy griddinâ€™!
+ */
+/*------------------------------------*     $MIXINS
+\*------------------------------------*/
+/**
+ * These mixins are for the library to use only, you should not need to modify
+ * them at all.
+ *
+ * Enclose a block of code with a media query as named in `$breakpoints`.
+ */
+/**
+ * Drop relative positioning into silent classes, which canâ€™t take advantage of
+ * the `[class*="push--"]` and `[class*="pull--"]` selectors.
+ */
+/**
+ * Mixin to create the different sizes dynamically
+ */
+/*------------------------------------*     $GRID SETUP
+\*------------------------------------*/
+/**
+ * 1. Allow the grid system to be used on lists.
+ * 2. Remove any margins and paddings that might affect the grid system.
+ * 3. Apply a negative `margin-left` to negate the columnsâ€™ gutters.
+ */
+.grid {
+  list-style: none;
+/* [1] */
+  margin: 0;
+/* [2] */
+  padding: 0;
+/* [2] */
+  margin-left: -24px;
+/* [3] */
+  letter-spacing: -0.31em;
+}
+.opera:-o-prefocus,
+.grid {
+  word-spacing: -0.43em;
+}
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Required to combine fluid widths and fixed gutters.
+ */
+.grid__item {
+  display: inline-block;
+/* [1] */
+  padding-left: 24px;
+/* [2] */
+  vertical-align: top;
+/* [3] */
+  width: 100%;
+/* [4] */
+  -webkit-box-sizing: border-box;
+/* [5] */
+  -moz-box-sizing: border-box;
+/* [5] */
+  box-sizing: border-box;
+/* [5] */
+  position: relative;
+  letter-spacing: normal;
+}
+.grid--rev {
+  direction: rtl;
+  text-align: left;
+}
+.grid--rev > .grid__item {
+  direction: ltr;
+  text-align: left;
+}
+.grid--full {
+  margin-left: 0;
+}
+.grid--full > .grid__item {
+  padding-left: 0;
+}
+.grid--right {
+  text-align: right;
+}
+.grid--right > .grid__item {
+  text-align: left;
+}
+.grid--center {
+  text-align: center;
+}
+.grid--center > .grid__item {
+  text-align: left;
+}
+.grid--middle > .grid__item {
+  vertical-align: middle;
+}
+.grid--bottom > .grid__item {
+  vertical-align: bottom;
+}
+.grid--narrow {
+  margin-left: -12px;
+}
+.grid--narrow > .grid__item {
+  padding-left: 12px;
+}
+.grid--wide {
+  margin-left: -48px;
+}
+.grid--wide > .grid__item {
+  padding-left: 48px;
+}
+/*------------------------------------*     $WIDTHS
+\*------------------------------------*/
+.one-whole {
+  width: 100%;
+}
+.one-half {
+  width: 50%;
+}
+.one-third {
+  width: 33.33333333333333%;
+}
+.two-thirds {
+  width: 66.66666666666666%;
+}
+.one-quarter {
+  width: 25%;
+}
+.two-quarters {
+  width: 50%;
+}
+.three-quarters {
+  width: 75%;
+}
+.one-fifth {
+  width: 20%;
+}
+.two-fifths {
+  width: 40%;
+}
+.three-fifths {
+  width: 60%;
+}
+.four-fifths {
+  width: 80%;
+}
+.one-sixth {
+  width: 16.666666666666664%;
+}
+.two-sixths {
+  width: 33.33333333333333%;
+}
+.three-sixths {
+  width: 50%;
+}
+.four-sixths {
+  width: 66.66666666666666%;
+}
+.five-sixths {
+  width: 83.33333333333334%;
+}
+.one-eighth {
+  width: 12.5%;
+}
+.two-eighths {
+  width: 25%;
+}
+.three-eighths {
+  width: 37.5%;
+}
+.four-eighths {
+  width: 50%;
+}
+.five-eighths {
+  width: 62.5%;
+}
+.six-eighths {
+  width: 75%;
+}
+.seven-eighths {
+  width: 87.5%;
+}
+.one-tenth {
+  width: 10%;
+}
+.two-tenths {
+  width: 20%;
+}
+.three-tenths {
+  width: 30%;
+}
+.four-tenths {
+  width: 40%;
+}
+.five-tenths {
+  width: 50%;
+}
+.six-tenths {
+  width: 60%;
+}
+.seven-tenths {
+  width: 70%;
+}
+.eight-tenths {
+  width: 80%;
+}
+.nine-tenths {
+  width: 90%;
+}
+.one-twelfth {
+  width: 8.333333333333332%;
+}
+.two-twelfths {
+  width: 16.666666666666664%;
+}
+.three-twelfths {
+  width: 25%;
+}
+.four-twelfths {
+  width: 33.33333333333333%;
+}
+.five-twelfths {
+  width: 41.66666666666667%;
+}
+.six-twelfths {
+  width: 50%;
+}
+.seven-twelfths {
+  width: 58.333333333333336%;
+}
+.eight-twelfths {
+  width: 66.66666666666666%;
+}
+.nine-twelfths {
+  width: 75%;
+}
+.ten-twelfths {
+  width: 83.33333333333334%;
+}
+.eleven-twelfths {
+  width: 91.66666666666666%;
+}
+@media (max-width: 480px) {
+  .palm-one-whole {
+    width: 100%;
+  }
+  .palm-one-half {
+    width: 50%;
+  }
+  .palm-one-third {
+    width: 33.33333333333333%;
+  }
+  .palm-two-thirds {
+    width: 66.66666666666666%;
+  }
+  .palm-one-quarter {
+    width: 25%;
+  }
+  .palm-two-quarters {
+    width: 50%;
+  }
+  .palm-three-quarters {
+    width: 75%;
+  }
+  .palm-one-fifth {
+    width: 20%;
+  }
+  .palm-two-fifths {
+    width: 40%;
+  }
+  .palm-three-fifths {
+    width: 60%;
+  }
+  .palm-four-fifths {
+    width: 80%;
+  }
+  .palm-one-sixth {
+    width: 16.666666666666664%;
+  }
+  .palm-two-sixths {
+    width: 33.33333333333333%;
+  }
+  .palm-three-sixths {
+    width: 50%;
+  }
+  .palm-four-sixths {
+    width: 66.66666666666666%;
+  }
+  .palm-five-sixths {
+    width: 83.33333333333334%;
+  }
+  .palm-one-eighth {
+    width: 12.5%;
+  }
+  .palm-two-eighths {
+    width: 25%;
+  }
+  .palm-three-eighths {
+    width: 37.5%;
+  }
+  .palm-four-eighths {
+    width: 50%;
+  }
+  .palm-five-eighths {
+    width: 62.5%;
+  }
+  .palm-six-eighths {
+    width: 75%;
+  }
+  .palm-seven-eighths {
+    width: 87.5%;
+  }
+  .palm-one-tenth {
+    width: 10%;
+  }
+  .palm-two-tenths {
+    width: 20%;
+  }
+  .palm-three-tenths {
+    width: 30%;
+  }
+  .palm-four-tenths {
+    width: 40%;
+  }
+  .palm-five-tenths {
+    width: 50%;
+  }
+  .palm-six-tenths {
+    width: 60%;
+  }
+  .palm-seven-tenths {
+    width: 70%;
+  }
+  .palm-eight-tenths {
+    width: 80%;
+  }
+  .palm-nine-tenths {
+    width: 90%;
+  }
+  .palm-one-twelfth {
+    width: 8.333333333333332%;
+  }
+  .palm-two-twelfths {
+    width: 16.666666666666664%;
+  }
+  .palm-three-twelfths {
+    width: 25%;
+  }
+  .palm-four-twelfths {
+    width: 33.33333333333333%;
+  }
+  .palm-five-twelfths {
+    width: 41.66666666666667%;
+  }
+  .palm-six-twelfths {
+    width: 50%;
+  }
+  .palm-seven-twelfths {
+    width: 58.333333333333336%;
+  }
+  .palm-eight-twelfths {
+    width: 66.66666666666666%;
+  }
+  .palm-nine-twelfths {
+    width: 75%;
+  }
+  .palm-ten-twelfths {
+    width: 83.33333333333334%;
+  }
+  .palm-eleven-twelfths {
+    width: 91.66666666666666%;
+  }
+}
+@media (min-width: 481px) and (max-width: 1023px) {
+  .lap-one-whole {
+    width: 100%;
+  }
+  .lap-one-half {
+    width: 50%;
+  }
+  .lap-one-third {
+    width: 33.33333333333333%;
+  }
+  .lap-two-thirds {
+    width: 66.66666666666666%;
+  }
+  .lap-one-quarter {
+    width: 25%;
+  }
+  .lap-two-quarters {
+    width: 50%;
+  }
+  .lap-three-quarters {
+    width: 75%;
+  }
+  .lap-one-fifth {
+    width: 20%;
+  }
+  .lap-two-fifths {
+    width: 40%;
+  }
+  .lap-three-fifths {
+    width: 60%;
+  }
+  .lap-four-fifths {
+    width: 80%;
+  }
+  .lap-one-sixth {
+    width: 16.666666666666664%;
+  }
+  .lap-two-sixths {
+    width: 33.33333333333333%;
+  }
+  .lap-three-sixths {
+    width: 50%;
+  }
+  .lap-four-sixths {
+    width: 66.66666666666666%;
+  }
+  .lap-five-sixths {
+    width: 83.33333333333334%;
+  }
+  .lap-one-eighth {
+    width: 12.5%;
+  }
+  .lap-two-eighths {
+    width: 25%;
+  }
+  .lap-three-eighths {
+    width: 37.5%;
+  }
+  .lap-four-eighths {
+    width: 50%;
+  }
+  .lap-five-eighths {
+    width: 62.5%;
+  }
+  .lap-six-eighths {
+    width: 75%;
+  }
+  .lap-seven-eighths {
+    width: 87.5%;
+  }
+  .lap-one-tenth {
+    width: 10%;
+  }
+  .lap-two-tenths {
+    width: 20%;
+  }
+  .lap-three-tenths {
+    width: 30%;
+  }
+  .lap-four-tenths {
+    width: 40%;
+  }
+  .lap-five-tenths {
+    width: 50%;
+  }
+  .lap-six-tenths {
+    width: 60%;
+  }
+  .lap-seven-tenths {
+    width: 70%;
+  }
+  .lap-eight-tenths {
+    width: 80%;
+  }
+  .lap-nine-tenths {
+    width: 90%;
+  }
+  .lap-one-twelfth {
+    width: 8.333333333333332%;
+  }
+  .lap-two-twelfths {
+    width: 16.666666666666664%;
+  }
+  .lap-three-twelfths {
+    width: 25%;
+  }
+  .lap-four-twelfths {
+    width: 33.33333333333333%;
+  }
+  .lap-five-twelfths {
+    width: 41.66666666666667%;
+  }
+  .lap-six-twelfths {
+    width: 50%;
+  }
+  .lap-seven-twelfths {
+    width: 58.333333333333336%;
+  }
+  .lap-eight-twelfths {
+    width: 66.66666666666666%;
+  }
+  .lap-nine-twelfths {
+    width: 75%;
+  }
+  .lap-ten-twelfths {
+    width: 83.33333333333334%;
+  }
+  .lap-eleven-twelfths {
+    width: 91.66666666666666%;
+  }
+}
+@media (max-width: 1023px) {
+  .portable-one-whole {
+    width: 100%;
+  }
+  .portable-one-half {
+    width: 50%;
+  }
+  .portable-one-third {
+    width: 33.33333333333333%;
+  }
+  .portable-two-thirds {
+    width: 66.66666666666666%;
+  }
+  .portable-one-quarter {
+    width: 25%;
+  }
+  .portable-two-quarters {
+    width: 50%;
+  }
+  .portable-three-quarters {
+    width: 75%;
+  }
+  .portable-one-fifth {
+    width: 20%;
+  }
+  .portable-two-fifths {
+    width: 40%;
+  }
+  .portable-three-fifths {
+    width: 60%;
+  }
+  .portable-four-fifths {
+    width: 80%;
+  }
+  .portable-one-sixth {
+    width: 16.666666666666664%;
+  }
+  .portable-two-sixths {
+    width: 33.33333333333333%;
+  }
+  .portable-three-sixths {
+    width: 50%;
+  }
+  .portable-four-sixths {
+    width: 66.66666666666666%;
+  }
+  .portable-five-sixths {
+    width: 83.33333333333334%;
+  }
+  .portable-one-eighth {
+    width: 12.5%;
+  }
+  .portable-two-eighths {
+    width: 25%;
+  }
+  .portable-three-eighths {
+    width: 37.5%;
+  }
+  .portable-four-eighths {
+    width: 50%;
+  }
+  .portable-five-eighths {
+    width: 62.5%;
+  }
+  .portable-six-eighths {
+    width: 75%;
+  }
+  .portable-seven-eighths {
+    width: 87.5%;
+  }
+  .portable-one-tenth {
+    width: 10%;
+  }
+  .portable-two-tenths {
+    width: 20%;
+  }
+  .portable-three-tenths {
+    width: 30%;
+  }
+  .portable-four-tenths {
+    width: 40%;
+  }
+  .portable-five-tenths {
+    width: 50%;
+  }
+  .portable-six-tenths {
+    width: 60%;
+  }
+  .portable-seven-tenths {
+    width: 70%;
+  }
+  .portable-eight-tenths {
+    width: 80%;
+  }
+  .portable-nine-tenths {
+    width: 90%;
+  }
+  .portable-one-twelfth {
+    width: 8.333333333333332%;
+  }
+  .portable-two-twelfths {
+    width: 16.666666666666664%;
+  }
+  .portable-three-twelfths {
+    width: 25%;
+  }
+  .portable-four-twelfths {
+    width: 33.33333333333333%;
+  }
+  .portable-five-twelfths {
+    width: 41.66666666666667%;
+  }
+  .portable-six-twelfths {
+    width: 50%;
+  }
+  .portable-seven-twelfths {
+    width: 58.333333333333336%;
+  }
+  .portable-eight-twelfths {
+    width: 66.66666666666666%;
+  }
+  .portable-nine-twelfths {
+    width: 75%;
+  }
+  .portable-ten-twelfths {
+    width: 83.33333333333334%;
+  }
+  .portable-eleven-twelfths {
+    width: 91.66666666666666%;
+  }
+}
+@media (min-width: 1024px) {
+  .desk-one-whole {
+    width: 100%;
+  }
+  .desk-one-half {
+    width: 50%;
+  }
+  .desk-one-third {
+    width: 33.33333333333333%;
+  }
+  .desk-two-thirds {
+    width: 66.66666666666666%;
+  }
+  .desk-one-quarter {
+    width: 25%;
+  }
+  .desk-two-quarters {
+    width: 50%;
+  }
+  .desk-three-quarters {
+    width: 75%;
+  }
+  .desk-one-fifth {
+    width: 20%;
+  }
+  .desk-two-fifths {
+    width: 40%;
+  }
+  .desk-three-fifths {
+    width: 60%;
+  }
+  .desk-four-fifths {
+    width: 80%;
+  }
+  .desk-one-sixth {
+    width: 16.666666666666664%;
+  }
+  .desk-two-sixths {
+    width: 33.33333333333333%;
+  }
+  .desk-three-sixths {
+    width: 50%;
+  }
+  .desk-four-sixths {
+    width: 66.66666666666666%;
+  }
+  .desk-five-sixths {
+    width: 83.33333333333334%;
+  }
+  .desk-one-eighth {
+    width: 12.5%;
+  }
+  .desk-two-eighths {
+    width: 25%;
+  }
+  .desk-three-eighths {
+    width: 37.5%;
+  }
+  .desk-four-eighths {
+    width: 50%;
+  }
+  .desk-five-eighths {
+    width: 62.5%;
+  }
+  .desk-six-eighths {
+    width: 75%;
+  }
+  .desk-seven-eighths {
+    width: 87.5%;
+  }
+  .desk-one-tenth {
+    width: 10%;
+  }
+  .desk-two-tenths {
+    width: 20%;
+  }
+  .desk-three-tenths {
+    width: 30%;
+  }
+  .desk-four-tenths {
+    width: 40%;
+  }
+  .desk-five-tenths {
+    width: 50%;
+  }
+  .desk-six-tenths {
+    width: 60%;
+  }
+  .desk-seven-tenths {
+    width: 70%;
+  }
+  .desk-eight-tenths {
+    width: 80%;
+  }
+  .desk-nine-tenths {
+    width: 90%;
+  }
+  .desk-one-twelfth {
+    width: 8.333333333333332%;
+  }
+  .desk-two-twelfths {
+    width: 16.666666666666664%;
+  }
+  .desk-three-twelfths {
+    width: 25%;
+  }
+  .desk-four-twelfths {
+    width: 33.33333333333333%;
+  }
+  .desk-five-twelfths {
+    width: 41.66666666666667%;
+  }
+  .desk-six-twelfths {
+    width: 50%;
+  }
+  .desk-seven-twelfths {
+    width: 58.333333333333336%;
+  }
+  .desk-eight-twelfths {
+    width: 66.66666666666666%;
+  }
+  .desk-nine-twelfths {
+    width: 75%;
+  }
+  .desk-ten-twelfths {
+    width: 83.33333333333334%;
+  }
+  .desk-eleven-twelfths {
+    width: 91.66666666666666%;
+  }
+}

@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PMS</title>
     <script>
-      window.ENV = 'production';
+      window.ENV = 'test';
+      console.log('ENVIRONMENT: TEST');
       Ember = {};
+      Ember.testing = true;
       Ember.TEMPLATES = {};
     </script>
+
+    <!-- Load up QUnit -->
+    <link rel="stylesheet" type="text/css" href="vendor/qunit/qunit/qunit.css">
+    <script src="vendor/qunit/qunit/qunit.js"></script>
+
     <link rel="stylesheet" type="text/css" href="build/css/app.css">
     <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/handlebars/handlebars.js"></script>
@@ -16,8 +23,38 @@
     <script src="vendor/ember-data/index.js"></script>
     <script src="build/js/templates.js"></script>
     <script src="build/js/app.js"></script>
+
+    <style>
+      #ember-testing-container {
+        position: absolute;
+        background: white;
+        bottom: 0;
+        right: 0;
+        width: 640px;
+        height: 384px;
+        overflow: auto;
+        z-index: 9999;
+        border: 1px solid #ccc;
+      }
+      #ember-testing {
+        zoom: 50%;
+      }
+    </style>
+
   </head>
   <body>
+
+
+    <div id="ember-testing-container">
+      <div id="ember-testing"></div>
+    </div>
+
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+
+  <script src="tests/test-helper.js"></script>
+  <script src="build/js/tests.js"></script>
+
     <!-- Autoreload -->
     <script>
       var path = './restart.txt';
