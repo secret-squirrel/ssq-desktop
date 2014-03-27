@@ -733,29 +733,44 @@ body {
     width: 91.66666666666666%;
   }
 }
-html {
-  height: 100%;
-}
 body {
-  height: 100%;
   background: #efefef;
 }
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
 nav {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  background: #333;
+  height: 50px;
+  padding: 0 10px;
 }
 nav ul {
   padding: 0;
   margin: 0;
 }
 nav ul li {
+  text-transform: uppercase;
+  line-height: 50px;
+  color: #fff;
   padding: 0;
   margin: 0;
   list-style: none;
   cursor: pointer;
   display: inline-block;
   margin-right: 20px;
+  font-size: 12px;
+}
+nav ul li.active {
+  text-decoration: underline;
+}
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 80px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  line-height: 14px;
 }
 
 
@@ -782,42 +797,64 @@ div {
 
 
 nav {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  background: #333;
+  height: 50px;
+  padding: 0 10px;
 }
 nav ul {
   padding: 0;
   margin: 0;
 }
 nav ul li {
+  text-transform: uppercase;
+  line-height: 50px;
+  color: #fff;
   padding: 0;
   margin: 0;
   list-style: none;
   cursor: pointer;
   display: inline-block;
   margin-right: 20px;
+  font-size: 12px;
+}
+nav ul li.active {
+  text-decoration: underline;
 }
 
-body.welcome {
-  height: 100%;
-}
-body.welcome > .ember-view {
-  width: 100%;
-  height: 100%;
-}
-body.welcome .container {
-  display: table;
-  width: 70%;
-  height: 100%;
-  margin: 0 auto;
-}
-body.welcome .vertical-center {
-  display: table-cell;
-  vertical-align: middle;
-}
-body.welcome img {
+pre {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 4px;
+  overflow: scroll;
   max-width: 100%;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 80px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  line-height: 14px;
+}
+
+body.styleguide section {
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+body.styleguide section:last-child {
+  border-bottom: 0;
+}
+
+body.welcome .bg-container {
+  width: 80%;
+  max-width: 400px;
+  min-height: 300px;
+  margin: 0 auto;
+  background-image: url("../../app/images/secret-squirrel-logo.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /*------------------------------------*     $CSSWIZARDRY-GRIDS
@@ -1692,10 +1729,10 @@ body.welcome img {
   }
 }
 
-html {
-  height: 100%;
-}
 body {
-  height: 100%;
   background: #efefef;
+}
+.container {
+  max-width: 90%;
+  margin: 0 auto;
 }

@@ -1,10 +1,26 @@
 <div class='container'>
 
-  <h1 class='title'>Setup</h1>
+  <h1 class='title'>Setup - Generate a Key</h1>
 
-  <p>
-    <strong>Step 1:</strong> Generate Your Private Key
+  <label>Master Password:</label>
+  <div class="controls">
+    {{#if error}}
+      <div class='error'>{{error}}</div>
+    {{/if}}
+    {{input value=keyPassword type='password'}}<br>
+    {{input value=keyPasswordConfirm type='password'}}
+  </div>
+  <div class="controls">
     <button {{action 'generate'}}>Generate</button>
-  </p>
+  </div>
+
+  {{#if key}}
+    <h4>Public Key</h4>
+    {{textarea value=key.pubKey}}
+    <h4>
+      Private Key
+    </h4>
+    {{textarea value=key.key}}
+  {{/if}}
 
 </div>

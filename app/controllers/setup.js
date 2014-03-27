@@ -1,12 +1,23 @@
 App.SetupController = Ember.Controller.extend({
+
+  keyPassword: '',
+  keyPasswordConfirm: '',
+
   actions: {
     generate: function() {
       var _this = this;
+      this.set('error', false);
       var keygen = require('ssh-keygen');
       var fs = require('fs');
-
       var location = process.cwd() + '/secretsquirrel.key';
-      console.log(location);
+      if (this.get('keyPassword') == '') {
+        this.set('error', 'You must provide a master password');
+        return;
+      }
+      if (this.get('keyPassword') != this.get('keyPasswordConfirm')) {
+        this.set('error', 'Your passwords did not match');
+        return;
+      }
       var password = 'passpass';
       keygen({
         location: location,
@@ -14,10 +25,10 @@ App.SetupController = Ember.Controller.extend({
         read: true
       }, function(err, out) {
         if(err) {
-          alert('There was a problem generating your SSH key!');
-          return;
+          _this.set('keyError', true);
+        }else{
+          _this.set('key', out);
         }
-        alert("Your key was generated, but I can't figure out javascript scope so you can't have it...");
       });
     }
   }
