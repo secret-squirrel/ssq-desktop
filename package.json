@@ -33,10 +33,10 @@
     "toolbar": true,
     "frame": true,
     "width": 400,
-    "height": 600,
+    "height": 400,
     "position": "center",
     "min_width": 400,
-    "min_height": 600
+    "min_height": 400
   },
   "webkit": {
     "plugin": true
@@ -57,5 +57,9 @@
     "gulp-stylus": "^0.1.0",
     "gulp-shell": "^0.2.4",
     "gulp-preprocess": "^1.0.1"
+  },
+  "dependencies": {
+    "ursa": "^0.8.0",
+    "ssh-keygen": "^0.2.1"
   }
 }

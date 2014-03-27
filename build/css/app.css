@@ -1,3 +1,8 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 .grid {
   list-style: none;
 /* [1] */
@@ -728,6 +733,18 @@
     width: 91.66666666666666%;
   }
 }
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background: #efefef;
+}
+nav {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
 nav ul {
   padding: 0;
   margin: 0;
@@ -737,11 +754,38 @@ nav ul li {
   margin: 0;
   list-style: none;
   cursor: pointer;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+blockquote,
+span,
+div {
+  font-family: Helvetica, Arial;
+}
 
 
+nav {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
 nav ul {
   padding: 0;
   margin: 0;
@@ -751,6 +795,29 @@ nav ul li {
   margin: 0;
   list-style: none;
   cursor: pointer;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+body.welcome {
+  height: 100%;
+}
+body.welcome > .ember-view {
+  width: 100%;
+  height: 100%;
+}
+body.welcome .container {
+  display: table;
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+}
+body.welcome .vertical-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+body.welcome img {
+  max-width: 100%;
 }
 
 /*------------------------------------*     $CSSWIZARDRY-GRIDS
@@ -1623,4 +1690,12 @@ nav ul li {
   .desk-eleven-twelfths {
     width: 91.66666666666666%;
   }
+}
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background: #efefef;
 }

@@ -1,9 +1,9 @@
-module('Acceptances - Application Loads', {
+module('Initialize - Application Loads', {
   setup: function() {
-    App.reset()
+    App.reset();
   },
   teardown: function() {
-    Ember.run(App, 'destroy');
+    App.reset();
   }
 });
 
