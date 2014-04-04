@@ -9,8 +9,7 @@ module('Route - Welcome Route Test', {
 
 test('that the welcome route loads correctly', function() {
   visit('/welcome').then(function() {
-    expect(2);
-    ok(find('.title:contains("Welcome")').length);
+    expect(1);
     ok($(App.rootElement).hasClass('ember-application'));
   })
 });

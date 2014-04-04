@@ -27,6 +27,47 @@ if(ENV != 'test') {
 
 }
 
+App.Db = Ember.Object.create({
+
+  read: function(key, value) {
+    return localStorage[key];
+  },
+
+  write: function(key, value) {
+    localStorage[key] = value;
+    return localStorage[key];
+  },
+
+  clear: function() {
+    localStorage.clear();
+    return true;
+  },
+
+  hasValidSettings: function() {
+    var settings = this.read('settings')
+    if (!settings) {
+      return false;
+    }
+    var hasSettings = true;
+    for(var i=0; i < this.requiredSettings.length; i++) {
+      var value = localStorage[this.requiredSettings[i]]
+      if (value == undefined || value.length == 0) {
+        hasSettings = false;
+      }
+    }
+    return hasSettings;
+  },
+
+  requiredSettings: function() {
+    return [
+      'email',
+      'masterPasswordSet',
+      'publicKey',
+      'privateKey'
+    ];
+  }
+
+});
 App.Router.map(function() {
   this.resource('setup');
   this.resource('styleguide');
@@ -77,6 +118,16 @@ App.SetupController = Ember.Controller.extend({
     }
   }
 });
+App.ApplicationRoute = Ember.Route.extend({
+
+  redirect: function(arg, transition) {
+    if (!App.Db.hasValidSettings() && transition.targetName != 'styleguide') {
+      this.transitionTo('setup');
+    }
+  }
+
+});
+
 App.SetupRoute = Ember.Route.extend({
 
 });

@@ -17,6 +17,6 @@ test('that the route is loaded', function() {
 
 test('clicking generate will generate an SSH key', function() {
   visit('/setup').then(function() {
-    
+    ok(find('.title').length, 'The title was not found');
   });
 });

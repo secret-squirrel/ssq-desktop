@@ -765,12 +765,15 @@ nav ul li.active {
   text-decoration: underline;
 }
 textarea {
+  box-sizing: border-box;
   display: block;
   width: 100%;
   min-height: 80px;
   border: 1px solid #ddd;
   padding: 10px;
   line-height: 14px;
+  font-size: 14px;
+  max-width: 100%;
 }
 
 
@@ -795,6 +798,25 @@ div {
   font-family: Helvetica, Arial;
 }
 
+
+.button {
+  border: 0;
+  background: #333;
+  color: #fff;
+  padding: 10px 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+}
+.button:hover {
+  background: #444;
+}
+
+label {
+  font-weight: bold;
+  font-size: 12px;
+}
 
 nav {
   background: #333;
@@ -830,12 +852,25 @@ pre {
 }
 
 textarea {
+  box-sizing: border-box;
   display: block;
   width: 100%;
   min-height: 80px;
   border: 1px solid #ddd;
   padding: 10px;
   line-height: 14px;
+  font-size: 14px;
+  max-width: 100%;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  padding: 6px;
+  font-size: 14px;
+  width: 100%;
 }
 
 body.styleguide section {
@@ -855,6 +890,12 @@ body.welcome .bg-container {
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
+  text-align: center;
+  position: relative;
+}
+body.welcome .bg-container .button {
+  position: relative;
+  top: 230px;
 }
 
 /*------------------------------------*     $CSSWIZARDRY-GRIDS

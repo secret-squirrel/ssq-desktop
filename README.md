@@ -33,6 +33,9 @@ This project is built using [node-webkit](https://github.com/rogerwang/node-webk
 * [Ember Canary](http://emberjs.com/builds/)
 * [Stylus](http://learnboost.github.io/stylus/)
 * [Gulp](http://gulpjs.com/)
+* `node-webkit v0.8.5`
+* `node.js v0.10.22`
+* `Chromium 30.0.1599.66`
 
 ## Troubleshooting
 

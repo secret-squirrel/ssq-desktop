@@ -24,3 +24,8 @@ function startApp(attrs) {
   return App;
 
 }
+
+function mockSettings() {
+  var mockSettings = {email: 'john.smith@test.com', publicKey: 'xxx', privateKey: 'xxx', masterPasswordSet: true};
+  App.Db.write('settings', mockSettings);
+}

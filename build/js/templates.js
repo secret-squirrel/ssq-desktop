@@ -92,7 +92,12 @@ function program3(depth0,data) {
   return buffer;
   }
 
-  data.buffer.push("<div class='container'>\n\n  <h1 class='title'>Setup - Generate a Key</h1>\n\n  <label>Master Password:</label>\n  <div class=\"controls\">\n    ");
+  data.buffer.push("<div class='container'>\n\n  <h1 class='title'>Setup - Generate a Key</h1>\n\n  <label>Email Address:</label>\n  <div class=\"controls\">\n    ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'value': ("email"),
+    'type': ("email")
+  },hashTypes:{'value': "ID",'type': "STRING"},hashContexts:{'value': depth0,'type': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n  </div>\n\n  <label>Master Password:</label>\n  <div class=\"controls\">\n    ");
   stack1 = helpers['if'].call(depth0, "error", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n    ");
@@ -105,7 +110,7 @@ function program3(depth0,data) {
     'value': ("keyPasswordConfirm"),
     'type': ("password")
   },hashTypes:{'value': "ID",'type': "STRING"},hashContexts:{'value': depth0,'type': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("\n  </div>\n  <div class=\"controls\">\n    <button ");
+  data.buffer.push("\n  </div>\n  <div class=\"controls\">\n    <button class=\"button\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "generate", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
   data.buffer.push(">Generate</button>\n  </div>\n\n  ");
   stack1 = helpers['if'].call(depth0, "key", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["ID"],data:data});
@@ -124,6 +129,8 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push(escapeExpression((helper = helpers.partial || (depth0 && depth0.partial),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "styleguide/textarea", options) : helperMissing.call(depth0, "partial", "styleguide/textarea", options))));
   data.buffer.push("\n  ");
   data.buffer.push(escapeExpression((helper = helpers.partial || (depth0 && depth0.partial),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "styleguide/textfield", options) : helperMissing.call(depth0, "partial", "styleguide/textfield", options))));
+  data.buffer.push("\n  ");
+  data.buffer.push(escapeExpression((helper = helpers.partial || (depth0 && depth0.partial),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "styleguide/button", options) : helperMissing.call(depth0, "partial", "styleguide/button", options))));
   data.buffer.push("\n\n</div>");
   return buffer;
   
@@ -131,10 +138,30 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 Ember.TEMPLATES["welcome"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
+
+function program1(depth0,data) {
+  
+  
+  data.buffer.push("Let's Get Started");
+  }
+
+  data.buffer.push("<div class='bg-container'>\n  ");
+  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
+    'classNames': ("button")
+  },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "setup", options) : helperMissing.call(depth0, "link-to", "setup", options));
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n</div>");
+  return buffer;
+  
+});
+Ember.TEMPLATES["styleguide/_button"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 
 
-  data.buffer.push("<div class='bg-container'></div>");
+  data.buffer.push("<section>\n  <h3>Buttons</h3>\n  <a href='#' class='button'>Basic Button</a>\n</section>");
   
 });
 Ember.TEMPLATES["styleguide/_textarea"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
