@@ -14,7 +14,7 @@
     "test": "ember test"
   },
   "window": {
-    "title": "Super Test",
+    "title": "Secret Squirrel",
     "toolbar": true,
     "frame": true,
     "width": 400,

@@ -1,20 +1,19 @@
 ```
-
- _____          _                 _   _           _             _    _      _     _    _ _   
-|  ___|        | |               | \ | |         | |           | |  | |    | |   | |  (_) |  
-| |__ _ __ ___ | |__   ___ _ __  |  \| | ___   __| | ___ ______| |  | | ___| |__ | | ___| |_ 
-|  __| '_ ` _ \| '_ \ / _ \ '__| | . ` |/ _ \ / _` |/ _ \______| |/\| |/ _ \ '_ \| |/ / | __|
-| |__| | | | | | |_) |  __/ |    | |\  | (_) | (_| |  __/      \  /\  /  __/ |_) |   <| | |_ 
-\____/_| |_| |_|_.__/ \___|_|    \_| \_/\___/ \__,_|\___|       \/  \/ \___|_.__/|_|\_\_|\__|
-                                                                                             
-
+                         _                   _               _ 
+                        | |                 (_)             | |
+  ___  ___  ___ _ __ ___| |_ ___  __ _ _   _ _ _ __ _ __ ___| |
+ / __|/ _ \/ __| '__/ _ \ __/ __|/ _` | | | | | '__| '__/ _ \ |
+ \__ \  __/ (__| | |  __/ |_\__ \ (_| | |_| | | |  | | |  __/ |
+ |___/\___|\___|_|  \___|\__|___/\__, |\__,_|_|_|  |_|  \___|_|
+                                    | |                        
+                                    |_|                        
 ```
 
 ### Setup
 
 * Requirements: [Node](http://nodejs.org/), [Ember-CLI](https://github.com/stefanpenner/ember-cli) & [Gulp.js](http://gulpjs.com/) (`sudo npm install -g ember-cli gulp`)
-* `git clone git@github.com:Emerson/Ember-Node-Webkit-Example.git`
-* `cd Ember-Node-Webkit-Example && npm install && bower install`
+* `git clone git@github.com:secret-squirrel/ssq-desktop.git`
+* `cd ssq-desktop && npm install && bower install`
 * **Tab 1** - `gulp` - watches and triggers `ember build`
 * **Tab 2** - `npm start` - starts the node-webkit app
 
