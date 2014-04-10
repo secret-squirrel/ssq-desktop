@@ -35,6 +35,9 @@
   },
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "ursa": "https://github.com/mmacaulay/ursa/tarball/nw-0.8.5"
+  },
   "devDependencies": {
     "ember-cli": "0.0.22",
     "loom-generators-ember-appkit": "~1.0.5",
