@@ -1,5 +1,5 @@
 {
-  "name": "node-webkit",
+  "name": "ssk-desktop",
   "main": "./dist/index.html",
   "APIMethod": "stub",
   "version": "0.0.0",
@@ -9,7 +9,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "./node-webkit.app/Contents/MacOS/node-webkit node-webkit.nw",
+    "start": "./node-webkit-0.8.5.app/Contents/MacOS/node-webkit ssk-desktop.nw",
     "build": "ember build",
     "test": "ember test"
   },
@@ -28,8 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Emerson/Ember-Node-Webkit-Example.git"
-
+    "url": "git://github.com/secret-squirrel/ssq-desktop.git"
   },
   "engines": {
     "node": ">= 0.10.0"

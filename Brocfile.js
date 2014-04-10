@@ -16,7 +16,7 @@ var preprocessJs = p.preprocessJs;
 
 module.exports = function (broccoli) {
 
-  var prefix = 'node-webkit';
+  var prefix = 'ssq-desktop';
   var rootURL = '/';
 
   // index.html

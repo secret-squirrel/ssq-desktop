@@ -1,4 +1,4 @@
-var Router = require('node-webkit/router')['default'];
+var Router = require('ssq-desktop/router')['default'];
 
 function startApp(attrs) {
   var App;
@@ -15,7 +15,7 @@ function startApp(attrs) {
   });
 
   Ember.run(function(){
-    App = require('node-webkit/main')['default']('node-webkit', attributes);
+    App = require('ssq-desktop/main')['default']('ssq-desktop', attributes);
     App.setupForTesting();
     App.injectTestHelpers();
   });
