@@ -1,4 +1,5 @@
 import Resolver from 'ember/resolver';
+import KeyRing from 'ssq-desktop/utils/keyring';
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
 

@@ -12,4 +12,8 @@ gulp.task('watch', function() {
   gulp.watch('tests/**/*', ['rebuild']);
 });
 
-gulp.task('default', ['rebuild', 'watch']);
+gulp.task('api-stub', shell.task([
+  'node api-stub/server.js'
+]));
+
+gulp.task('default', ['api-stub', 'rebuild', 'watch']);

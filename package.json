@@ -52,6 +52,7 @@
     "broccoli-env": "0.0.1",
     "broccoli-replace": "0.1.5",
     "gulp": "^3.6.0",
-    "gulp-shell": "^0.2.4"
+    "gulp-shell": "^0.2.4",
+    "ws": "^0.4.31"
   }
 }
