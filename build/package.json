@@ -1,0 +1,8 @@
+{
+  "name": "ssq-build",
+  "version": "0.0.0",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-download-atom-shell": "^0.7.0"
+  }
+}
