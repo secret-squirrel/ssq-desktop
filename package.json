@@ -1,0 +1,17 @@
+{
+  "name": "ssq-desktop",
+  "description": "Secret Squirrel Desktop",
+  "version": "0.0.0",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/secret-squirrel/ssq-desktop.git"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.7.0",
+    "gulp-shell": "^0.2.5",
+    "node-webkit-builder": "0.0.2"
+  }
+}

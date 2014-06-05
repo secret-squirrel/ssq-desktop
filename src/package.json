@@ -1,0 +1,17 @@
+{
+  "name": "ssq-desktop",
+  "description": "Secret Squirrel Desktop App",
+  "version": "0.0.0",
+  "main": "index.html",
+  "contributors":[
+  ],
+  "window": {
+    "toolbar": true,
+    "width": 1200,
+    "height": 960
+  },
+  "dependencies": {
+  },
+  "scripts":{
+  }
+}
