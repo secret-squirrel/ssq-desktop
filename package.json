@@ -8,10 +8,14 @@
     "url": "git://github.com/secret-squirrel/ssq-desktop.git"
   },
   "license": "MIT",
-  "dependencies": {},
+  "scripts": {
+    "app": "nodewebkit src"
+  },
+  "dependencies": {
+    "nodewebkit": "^0.8.6" 
+  },
   "devDependencies": {
     "gulp": "^3.7.0",
-    "gulp-shell": "^0.2.5",
-    "node-webkit-builder": "0.0.2"
+    "gulp-shell": "^0.2.5"
   }
 }
