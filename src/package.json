@@ -3,6 +3,19 @@
   "description": "Secret Squirrel Desktop App",
   "version": "0.0.0",
   "main": "index.html",
+  "window": {
+    "title": "Secret Squirrel",
+    "icon": "images/ssq.png",
+    "toolbar": true,
+    "frame": true,
+    "width": 800,
+    "height": 500,
+    "position": "mouse",
+    "min_width": 400,
+    "min_height": 200,
+    "max_width": 800,
+    "max_height": 600
+  },
   "contributors":[
   ],
   "window": {
