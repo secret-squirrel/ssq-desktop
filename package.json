@@ -9,13 +9,17 @@
   },
   "license": "MIT",
   "scripts": {
-    "app": "nodewebkit src"
+    "app": "nodewebkit build"
   },
   "dependencies": {
-    "nodewebkit": "^0.8.6" 
+    "nodewebkit": "^0.8.6"
   },
   "devDependencies": {
     "gulp": "^3.7.0",
-    "gulp-shell": "^0.2.5"
+    "gulp-mocha": "^0.4.1",
+    "gulp-preprocess": "^1.0.1",
+    "gulp-shell": "^0.2.5",
+    "gulp-stylus": "^1.0.2",
+    "gulp-util": "^2.2.16"
   }
 }

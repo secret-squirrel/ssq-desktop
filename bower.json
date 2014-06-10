@@ -7,14 +7,7 @@
     "lib"
   ],
   "dependencies": {
-    "angular": "~1.2.3",
-    "requirejs": "~2.1.9",
-    "requirejs-domready": "~2.0.1",
-    "requirejs-text": "~2.0.10",
-    "lodash": "~2.2.1",
-    "less": "~1.5.1",
-    "jquery": "~2.0.3",
-    "angular-bootstrap": "~0.10.0",
-    "angular-ui-router": "angular-ui-router#0.2.8-bowratic-tedium"
+    "angular": "~1.2.16",
+    "jquery": "~2.1.1"
   }
 }

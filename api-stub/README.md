@@ -1,2 +1,0 @@
-# API Stub Documentation
-
