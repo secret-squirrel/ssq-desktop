@@ -4,6 +4,7 @@ var gutil = require('gulp-util')
 var stylus = require('gulp-stylus')
 var shell = require('gulp-shell')
 var preprocess = require('gulp-preprocess')
+var clean = require('gulp-clean')
 
 var paths = {
   scripts: ['src/js/**/*.js'],
@@ -47,6 +48,11 @@ gulp.task('test', function() {
   return gulp.src(['test/**/*.js'], { read: false })
     .pipe(mocha({ reporter: 'list' }))
     .on('error', gutil.log)
+})
+
+gulp.task('clean', function() {
+  return gulp.src('build', { read: false })
+    .pipe(clean())
 })
 
 gulp.task('watch', function() {
