@@ -1,3 +1,14 @@
-file: keyring.html
+<h1>Keyring</h1>
+<div>
+  <span>{{defaultKey.fingerprint}}</span>
+  Expires: {{defaultKey.expires}}
+  <blockquote>{{defaultKey.armor}}</blockquote>
+</div>
 
-{{test}}
+<ul>
+  <li ng-repeat="key in publicKeys">
+    <span>{{key.primaryKey.getFingerprint()}}</span>
+    Expires: {{key.getExpirationTime()}}
+    <blockquote>{{key.armor()}}</blockquote>
+  </li>
+</ul>

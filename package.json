@@ -12,7 +12,9 @@
     "app": "nodewebkit build"
   },
   "dependencies": {
-    "nodewebkit": "^0.8.6"
+    "nodewebkit": "^0.8.6",
+    "q": "~1.0.1",
+    "ssq-node-client": "git://github.com/secret-squirrel/ssq-node-client.git#packaging"
   },
   "devDependencies": {
     "gulp": "^3.7.0",
