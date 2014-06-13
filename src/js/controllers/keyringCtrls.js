@@ -9,12 +9,6 @@ controllers.controller('KeyringCtrl', ['$scope', '$rootScope', '$location', 'Key
       setDefaultKey()
     }
 
-    $scope.generateKey = function() {
-      Keyring.instance.createKeyPair('password', 1024)
-      Keyring.instance.store()
-      setDefaultKey()
-    }
-
     function setDefaultKey() {
       var defaultKey = Keyring.instance.defaultKey()
       $scope.defaultKey = {
@@ -48,3 +42,12 @@ controllers.controller('KeyringUnlockCtrl', ['$scope', '$location', 'Keyring',
   }
 ])
 
+controllers.controller('KeyringGenerateCtrl', ['$scope', '$location', 'Keyring',
+  function($scope, $location, Keyring) {
+    $scope.generate = function() {
+      Keyring.instance.createKeyPair($scope.passPhrase, $scope.bits)
+      Keyring.instance.store()
+      $location.path('/keyring')
+    }
+  }
+])

@@ -15,6 +15,10 @@ ssqApp.config(['$routeProvider',
         templateUrl: 'partials/keyring/unlock.html',
         controller: 'KeyringUnlockCtrl'
       }).
+      when('/keyring/generate', {
+        templateUrl: 'partials/keyring/generate.html',
+        controller: 'KeyringGenerateCtrl'
+      }).
       otherwise({
         redirectTo: '/keyring'
       })
