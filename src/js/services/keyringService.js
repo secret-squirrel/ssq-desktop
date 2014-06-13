@@ -5,6 +5,13 @@ var Keyring = ssq.Keyring(keystore)
 
 var ssqServices = angular.module('services', [])
 
-ssqServices.factory('Keyring', function() {
-  return Keyring
-})
+ssqServices.factory('Keyring', ['$location', 
+  function($location) {
+    return {
+      instance: Keyring,
+      unlock: function() {
+        $location.path('/keyring/unlock')
+      }
+    }
+  }
+])
