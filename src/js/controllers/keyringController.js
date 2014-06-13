@@ -7,11 +7,16 @@ var controllers = angular.module('controllers', [])
 
 controllers.controller('KeyringController', ['$scope', 
   function($scope) {
-    Keyring.load('1234qwer')
+    Keyring.load('password')
       .then(function() {
-        $scope.test = 'Hello from KeyringController'
-        $scope.publicKeys = Keyring.publicKeys()
-        $scope.defaultKey = Keyring.defaultKey()
+        $scope.$apply(function() {
+          var defaultKey = Keyring.defaultKey()
+          $scope.defaultKey = {
+            fingerprint: defaultKey.primaryKey.getFingerprint(),
+            userIds: defaultKey.getUserIds(),
+            armor: defaultKey.armor()
+          }
+        })
       })
       .catch(function(error) {
         console.log('Error:', error)

@@ -1,14 +1,6 @@
 <h1>Keyring</h1>
 <div>
-  <span>{{defaultKey.fingerprint}}</span>
-  Expires: {{defaultKey.expires}}
-  <blockquote>{{defaultKey.armor}}</blockquote>
+  {{defaultKey.userIds.join(', ')}}
+  <span>[{{defaultKey.fingerprint}}]</span>
+  <pre>{{defaultKey.armor}}</pre>
 </div>
-
-<ul>
-  <li ng-repeat="key in publicKeys">
-    <span>{{key.primaryKey.getFingerprint()}}</span>
-    Expires: {{key.getExpirationTime()}}
-    <blockquote>{{key.armor()}}</blockquote>
-  </li>
-</ul>
