@@ -40,7 +40,9 @@ controllers.controller('KeyringUnlockCtrl', ['$scope', '$location', 'Keyring',
         })
       })
       .catch(function(error) {
-        console.log('Error:', error)
+        $scope.$apply(function() {
+          $scope.error = error
+        })
       })
     }
   }
