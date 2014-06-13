@@ -2,7 +2,7 @@ var controllers = angular.module('controllers', [])
 
 controllers.controller('KeyringCtrl', ['$scope', '$rootScope', '$location', 'Keyring',
   function($scope, $rootScope, $location, Keyring) {
-    if(Keyring.instance.isLocked()) {
+    if(Keyring.isLocked()) {
       $rootScope.redirectTo = $location.path()
       $location.path('/keyring/unlock')
     } else {
@@ -10,7 +10,7 @@ controllers.controller('KeyringCtrl', ['$scope', '$rootScope', '$location', 'Key
     }
 
     function setDefaultKey() {
-      var defaultKey = Keyring.instance.defaultKey()
+      var defaultKey = Keyring.defaultKey()
       $scope.defaultKey = {
         fingerprint: defaultKey.primaryKey.getFingerprint(),
         userIds: defaultKey.getUserIds(),
@@ -23,7 +23,7 @@ controllers.controller('KeyringCtrl', ['$scope', '$rootScope', '$location', 'Key
 controllers.controller('KeyringUnlockCtrl', ['$scope', '$location', 'Keyring',
   function($scope, $location, Keyring) {
     $scope.unlock = function() {
-      Keyring.instance.load($scope.passPhrase)
+      Keyring.load($scope.passPhrase)
       .then(function() {
         $scope.$apply(function() {
           if($scope.redirectTo) {
@@ -45,8 +45,8 @@ controllers.controller('KeyringUnlockCtrl', ['$scope', '$location', 'Keyring',
 controllers.controller('KeyringGenerateCtrl', ['$scope', '$location', 'Keyring',
   function($scope, $location, Keyring) {
     $scope.generate = function() {
-      Keyring.instance.createKeyPair($scope.passPhrase, $scope.bits)
-      Keyring.instance.store()
+      Keyring.createKeyPair($scope.passPhrase, $scope.bits)
+      Keyring.store()
       $location.path('/keyring')
     }
   }
