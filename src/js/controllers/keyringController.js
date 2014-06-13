@@ -21,5 +21,10 @@ controllers.controller('KeyringController', ['$scope',
       .catch(function(error) {
         console.log('Error:', error)
       })
+
+    $scope.generateKey = function() {
+      Keyring.createKeyPair('password', 1024)
+      Keyring.store()
+    }
   }
 ])
