@@ -1,6 +1,7 @@
 var ssqApp = angular.module('ssqApp', [
   'ngRoute',
-  'controllers'
+  'controllers',
+  'services'
 ])
 
 ssqApp.config(['$routeProvider',

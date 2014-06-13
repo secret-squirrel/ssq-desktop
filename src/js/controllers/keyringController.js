@@ -1,12 +1,7 @@
-var config = require('./js/config')
-var keystore = require('./js/lib/keystore')(config)
-var ssq = require('ssq')
-var Keyring = ssq.Keyring(keystore)
-
 var controllers = angular.module('controllers', [])
 
-controllers.controller('KeyringController', ['$scope', 
-  function($scope) {
+controllers.controller('KeyringController', ['$scope', 'Keyring',
+  function($scope, Keyring) {
     Keyring.load('password')
       .then(function() {
         $scope.$apply(function() {
@@ -14,7 +9,7 @@ controllers.controller('KeyringController', ['$scope',
           $scope.defaultKey = {
             fingerprint: defaultKey.primaryKey.getFingerprint(),
             userIds: defaultKey.getUserIds(),
-            armor: defaultKey.armor()
+            armor: defaultKey.toPublic().armor()
           }
         })
       })
