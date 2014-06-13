@@ -1,5 +1,6 @@
 var ssqApp = angular.module('ssqApp', [
   'ngRoute',
+  'ui.bootstrap',
   'controllers',
   'services'
 ])
