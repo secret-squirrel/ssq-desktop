@@ -8,8 +8,8 @@
     "icon": "images/ssq.png",
     "toolbar": true,
     "frame": true,
-    "width": 800,
-    "height": 500,
+    "width": 1000,
+    "height": 600,
     "position": "mouse",
     "min_width": 400,
     "min_height": 200
