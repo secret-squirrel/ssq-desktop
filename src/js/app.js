@@ -1,6 +1,11 @@
 var ssqApp = angular.module('ssqApp', [
+  // vendor modules
   'ngRoute',
   'ui.bootstrap',
+  'angular-flash.service', 
+  'angular-flash.flash-alert-directive',
+
+  // application modules
   'controllers',
   'services'
 ])
