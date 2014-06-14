@@ -1,2 +1,22 @@
-Passphrase: <input type='password' ng-model='passPhrase' />
-<button ng-click='unlock()'>Unlock</button>
+<h2>Unlock your keyring</h2>
+<form name="unlockForm" 
+  class="form-inline"
+  ng-submit="unlock()" 
+  role="form" 
+  novalidate>
+  <div class="form-group">
+    <label for="passPhrase" 
+      class="control-label">Passphrase</label>
+    <input type="password" 
+      id="passPhrase"
+      name="passPhrase"
+      class="form-control"
+      ng-model="passPhrase" 
+      required>
+    <span ng-show="unlockForm.passPhrase.$dirty && generateForm.passPhrase.$invalid">
+      <span class="help-block" 
+        ng-show="generateForm.passPhrase.$error.required">Passphrase is required.</span>
+    </span>
+  </div>
+  <button type="submit" class="btn btn-primary">Unlock</button>
+</form>
