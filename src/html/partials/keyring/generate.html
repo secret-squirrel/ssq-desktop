@@ -1,5 +1,60 @@
-Passphrase: <input type='password' ng-model='passPhrase' />
-Bits: <input type='number' ng-model='bits' />
-<button ng-click='generate()'>Generate</button>
-<span>{{error}}</span>
+<h2>Generate a new key</h2>
+<form name="generateForm" 
+  class="form-horizontal"
+  ng-submit="generate(generateForm.$valid)" 
+  role="form" 
+  novalidate>
+  <div class="form-group">
+    <label for="passPhrase" 
+      class="col-xs-2 control-label">Passphrase</label>
+    <div class="col-xs-6">
+      <input type="password" 
+        id="passPhrase"
+        name="passPhrase"
+        class="form-control"
+        ng-model="passPhrase" 
+        ng-minlength="{{minPassphraseSize}}" 
+        ng-maxlength="{{maxPassphraseSize}}"
+        required> (at least {{minPassphraseSize}} characters)
+    </div>
+    <div ng-show="generateForm.passPhrase.$dirty && generateForm.passPhrase.$invalid">
+      <span class="help-block" 
+        ng-show="generateForm.passPhrase.$error.required">Passphrase is required.</span>
+      <span class="help-block" 
+        ng-show="generateForm.passPhrase.$error.minlength">Passphrase is too short.</span>
+      <span class="help-block"
+        ng-show="generateForm.passPhrase.$error.maxlength">Passphrase is too long.</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="keySize" 
+      class="col-xs-2 control-label">Key size (bits)</label>
+    <div class="col-xs-6">
+      <input type="number" 
+        id="keySize"
+        name="keySize"
+        class="form-control"
+        ng-model="keySize" 
+        min="{{minKeySize}}" 
+        max="{{maxKeySize}}"
+        required> ({{minKeySize}} - {{maxKeySize}} bits)
+    </div>
+    <div ng-show="generateForm.keySize.$dirty && generateForm.keySize.$invalid">
+      <span class="help-block"
+        ng-show="generateForm.keySize.$error.required">Key size is required.</span>
+      <span class="help-block"
+        ng-show="generateForm.keySize.$error.min">Key size is too small.</span>
+      <span class="help-block"
+        ng-show="generateForm.keySize.$error.max">Key size is too large.</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" 
+        class="btn btn-primary"
+        ng-disabled="generateForm.$invalid"
+        >Generate</button>
+    </div>
+  </div>
 
+</form>
