@@ -21,9 +21,19 @@
   <!-- application styles -->
 </head>
 <body>
-  <div flash-alert active-class="in alert" class="fade">
-    <span class="alert-message">{{flash.message}}</span>
-  </div>
-  <div ng-view></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <div flash-alert active-class="in alert" class="fade">
+          <span class="alert-message">{{flash.message}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div ng-view></div>
+      </div>
+    </div>
+</div>
 </body>
 </html>
