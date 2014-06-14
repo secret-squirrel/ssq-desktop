@@ -46,21 +46,25 @@ controllers.controller('KeyringUnlockCtrl',
 
 controllers.controller('KeyringGenerateCtrl', 
   function($scope, $rootScope, $location, flash, Keyring) {
-   if(Keyring.isLocked()) {
-     $rootScope.redirectTo = $location.path()
-     $location.path('/keyring/unlock')
-   } else {
+    if(Keyring.isLocked()) {
+      $rootScope.redirectTo = $location.path()
+      $location.path('/keyring/unlock')
+    } else {
       $scope.minPassphraseSize = 8
       $scope.maxPassphraseSize = 255
       $scope.minKeySize = 1024
       $scope.maxKeySize = 4096
-      
+      $scope.generating = false   
       $scope.generate = function(isValid) {
         if(isValid) {
+          $scope.generating = true
           Keyring.createKeyPair($scope.passPhrase, $scope.keySize)
-          Keyring.store()
-          flash.success = 'Key generated'
-          $location.path('/keyring')
+          .then(Keyring.store)
+          .then(function() {
+            $scope.generating = false
+            flash.success = 'Key generated'
+            $location.path('/keyring')
+          })
         }
       }
     }
