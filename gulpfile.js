@@ -1,3 +1,5 @@
+var NodeWebkitBuilder = require('node-webkit-builder')
+
 var gulp = require('gulp')
 var mocha = require('gulp-mocha')
 var gutil = require('gulp-util')
@@ -5,6 +7,7 @@ var stylus = require('gulp-stylus')
 var shell = require('gulp-shell')
 var preprocess = require('gulp-preprocess')
 var clean = require('gulp-clean')
+var merge = require('merge')
 
 var paths = {
   scripts: ['src/js/**/*.js'],
@@ -14,6 +17,48 @@ var paths = {
   vendor: ['vendor/**'],
   other: ['src/package.json']
 }
+
+var nwOptions = {
+  version: '0.9.2',
+  cacheDir: './tmp/cache',
+  checkVersions: false
+}
+
+gulp.task('run', ['build'], function() {
+  var nw = new NodeWebkitBuilder(merge(nwOptions, { 
+    files: './build/**',
+    platforms: ['osx']
+  }))
+  nw.on('log', function(msg) {
+    console.log(msg)
+  })
+  nw.run()
+})
+
+gulp.task('release', ['build'], function() {
+  var package = require('./package.json')
+
+  var modules = []
+  if (package.dependencies) {
+    modules = Object.keys(package.dependencies)
+              .filter(function(m) { return m != 'nodewebkit' })
+              .map(function(m) { return './node_modules/'+m+'/**/*' })
+  }
+
+  var nw = new NodeWebkitBuilder(merge(nwOptions, { 
+    files: [ './build/**/*' ].concat(modules),
+    buildDir: './release',
+    platforms: ['osx', 'win']
+  }))
+
+  nw.on('log', function(msg) {
+    console.log(msg)
+  })
+
+  nw.build(function(err) {
+    if (err) console.error(err)
+  })
+})
 
 gulp.task('html', function() {
   return gulp.src(paths.html)
@@ -64,4 +109,5 @@ gulp.task('watch', function() {
   gulp.watch(['src/**', 'test/**'], ['test'])
 })
 
-gulp.task('default', ['html', 'scripts', 'styles', 'vendor', 'other', 'test', 'watch'])
+gulp.task('build', ['html', 'scripts', 'styles', 'vendor', 'other', 'test'])
+gulp.task('default', ['build', 'watch'])
