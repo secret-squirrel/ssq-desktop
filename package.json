@@ -8,10 +8,10 @@
     "url": "git://github.com/secret-squirrel/ssq-desktop.git"
   },
   "license": "MIT",
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {
     "q": "~1.0.1",
+    "sprintf": "^0.1.3",
     "ssq-node-client": "git://github.com/secret-squirrel/ssq-node-client.git#packaging"
   },
   "devDependencies": {

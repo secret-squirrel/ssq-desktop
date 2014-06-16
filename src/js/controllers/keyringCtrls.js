@@ -1,3 +1,5 @@
+var sprintf = require('sprintf').sprintf
+
 var controllers = angular.module('controllers', [])
 
 controllers.controller('KeyringCtrl',   
@@ -54,14 +56,12 @@ controllers.controller('KeyringGenerateCtrl',
       $scope.maxPassphraseSize = 255
       $scope.minKeySize = 1024
       $scope.maxKeySize = 4096
-      $scope.generating = false   
       $scope.generate = function(isValid) {
         if(isValid) {
-          $scope.generating = true
-          Keyring.createKeyPair($scope.passPhrase, $scope.keySize)
+          var userId = sprintf('%s <%s>', $scope.name, $scope.email)
+          Keyring.createKeyPair($scope.passPhrase, userId, $scope.keySize)
           .then(Keyring.store)
           .then(function() {
-            $scope.generating = false
             flash.success = 'Key generated'
             $location.path('/keyring')
           })

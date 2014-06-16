@@ -1,9 +1,47 @@
-<h2>Generate a new key</h2>
+<h2>Generate a new PGP keypair</h2>
 <form name="generateForm" 
   class="form-horizontal"
   ng-submit="generate(generateForm.$valid)" 
   role="form" 
   novalidate>
+
+  <!-- Name -->
+  <div class="form-group">
+    <label for="name" 
+      class="col-xs-2 control-label">Name</label>
+    <div class="col-xs-6">
+      <input type="text" 
+        id="name"
+        name="name"
+        class="form-control"
+        ng-model="name" 
+        required>
+    </div>
+    <div ng-show="generateForm.name.$dirty && generateForm.name.$invalid">
+      <span class="help-block" 
+        ng-show="generateForm.name.$error.required">Name is required.</span>
+    </div>
+  </div>
+
+  <!-- Email -->
+  <div class="form-group">
+    <label for="email" 
+      class="col-xs-2 control-label">Email</label>
+    <div class="col-xs-6">
+      <input type="text" 
+        id="email"
+        email="email"
+        class="form-control"
+        ng-model="email" 
+        required>
+    </div>
+    <div ng-show="generateForm.email.$dirty && generateForm.email.$invalid">
+      <span class="help-block" 
+        ng-show="generateForm.email.$error.required">Email is required.</span>
+    </div>
+  </div>
+
+  <!-- Passphrase -->
   <div class="form-group">
     <label for="passPhrase" 
       class="col-xs-2 control-label">Passphrase</label>
@@ -26,6 +64,8 @@
         ng-show="generateForm.passPhrase.$error.maxlength">Passphrase is too long.</span>
     </div>
   </div>
+
+  <!-- Key size -->
   <div class="form-group">
     <label for="keySize" 
       class="col-xs-2 control-label">Key size (bits)</label>
@@ -48,14 +88,16 @@
         ng-show="generateForm.keySize.$error.max">Key size is too large.</span>
     </div>
   </div>
+
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <button type="submit" 
         class="btn btn-primary"
         ng-disabled="generateForm.$invalid"
         >Generate</button>
-      <span class="help-block" ng-show="generating">Generating...</span>
     </div>
   </div>
 
 </form>
+
+
