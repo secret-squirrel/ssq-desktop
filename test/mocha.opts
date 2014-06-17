@@ -1,0 +1,4 @@
+--require test/helper
+--recursive
+--globals data
+-R spec
