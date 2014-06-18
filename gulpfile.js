@@ -7,6 +7,9 @@ var stylus = require('gulp-stylus')
 var shell = require('gulp-shell')
 var preprocess = require('gulp-preprocess')
 var clean = require('gulp-clean')
+var jshint = require('gulp-jshint')
+var stylish = require('jshint-stylish')
+
 var merge = require('merge')
 
 var paths = {
@@ -68,6 +71,8 @@ gulp.task('html', function() {
 
 gulp.task('scripts', function() {
   return gulp.src(paths.scripts)
+    .pipe(jshint())
+    .pipe(jshint.reporter(stylish))
     .pipe(preprocess())
     .pipe(gulp.dest('build/js'))
 })
