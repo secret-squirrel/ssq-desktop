@@ -10,3 +10,9 @@ ssqServices.factory('Keyring', [
     return Keyring
   }
 ])
+
+ssqServices.factory('Keystore', [ 
+  function() {
+    return keystore
+  }
+])

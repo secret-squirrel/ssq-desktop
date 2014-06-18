@@ -6,13 +6,27 @@ var ssqApp = angular.module('ssqApp', [
   'angular-flash.flash-alert-directive',
 
   // application modules
-  'controllers',
+  'baseControllers',
+  'setupControllers',
+  'keyringControllers',
   'services'
 ])
 
-ssqApp.config(['$routeProvider',
+ssqApp.config(
   function($routeProvider) {
     $routeProvider.
+      when('/base', {
+        templateUrl: 'partials/base.html',
+        controller: 'BaseCtrl'
+      }).
+      when('/setup', {
+        templateUrl: 'partials/setup.html',
+        controller: 'SetupCtrl'
+      }).
+      when('/setup/key', {
+        templateUrl: 'partials/keyring/generate.html',
+        controller: 'SetupKeyCtrl'
+      }).
       when('/keyring', {
         templateUrl: 'partials/keyring/index.html',
         controller: 'KeyringCtrl'
@@ -26,6 +40,6 @@ ssqApp.config(['$routeProvider',
         controller: 'KeyringGenerateCtrl'
       }).
       otherwise({
-        redirectTo: '/keyring'
+        redirectTo: '/base'
       })
-  }])
+  })

@@ -24,7 +24,7 @@ module.exports = function(config) {
     })
   }
 
-  function hasSaneConfig() {
+  function checkConfig() {
     return checkUserConfig()
       .then(checkPubring)
       .then(checkSecring)
@@ -90,6 +90,6 @@ module.exports = function(config) {
       return writeFile(userConfig, JSON.stringify(config), fileOptions)
     },
     loadUserConfig: loadUserConfig,
-    hasSaneConfig: hasSaneConfig
+    checkConfig: checkConfig
   }
 }

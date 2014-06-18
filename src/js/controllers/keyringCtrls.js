@@ -1,6 +1,6 @@
 var sprintf = require('sprintf').sprintf
 
-var controllers = angular.module('controllers', [])
+var controllers = angular.module('keyringControllers', [])
 
 controllers.controller('KeyringCtrl',   
   function($scope, $rootScope, $location, Keyring) {
