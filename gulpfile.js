@@ -35,6 +35,12 @@ gulp.task('run', ['build'], function() {
   nw.on('log', function(msg) {
     console.log(msg)
   })
+  nw.on('stdout', function(msg) {
+    console.log(msg.toString())
+  })
+  nw.on('stderr', function(msg) {
+    console.log(msg.toString())
+  })
   nw.run()
 })
 
