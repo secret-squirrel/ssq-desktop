@@ -5,7 +5,6 @@
     "location": true,
     "setTimeout": true,
     "angular": true,
-    "assert": true,
     "$": true,
     "ENV": true,
     "module": true

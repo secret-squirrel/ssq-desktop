@@ -33,55 +33,23 @@ describe('keystore', function() {
   })
 
   describe('checkConfig', function() {
-    it('is true when user config, pubring, and secring are present', function() {
-      keystore.checkConfig()
-      .then(function(result) {
-        assert.ok(result.result)
-        assert.notOk(result.error)
-        done()
-      })
-      .catch(function(error) {
-        done(error)
-      })
+    it('is true when user config, pubring, and secring are present', function(done) {
+      assert.isFulfilled(keystore.checkConfig()).notify(done)
     })
 
     it('checks for a user config', function(done) {
       fs.unlinkSync(configFile)
-      keystore.checkConfig()
-      .then(function(result) {
-        assert.notOk(result.result)
-        assert.ok(result.error)
-        done()
-      })
-      .catch(function(error) {
-        done(error)
-      })
+      assert.isRejected(keystore.checkConfig()).notify(done)
     })
 
     it('checks for a public key ring file', function(done) {
       fs.unlinkSync(pubringFile)
-      keystore.checkConfig()
-      .then(function(result) {
-        assert.notOk(result.result)
-        assert.ok(result.error)
-        done()
-      })
-      .catch(function(error) {
-        done(error)
-      })
+      assert.isRejected(keystore.checkConfig()).notify(done)
     })
 
     it('checks for a secret key ring file', function(done) {
       fs.unlinkSync(pubringFile)
-      keystore.checkConfig()
-      .then(function(result) {
-        assert.notOk(result.result)
-        assert.ok(result.error)
-        done()
-      })
-      .catch(function(error) {
-        done(error)
-      })
+      assert.isRejected(keystore.checkConfig()).notify(done)
     })
   })
 })

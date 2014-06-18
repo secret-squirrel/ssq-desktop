@@ -1,6 +1,7 @@
 var Q = require('Q')
 var path = require('path')
 var fs = require('fs')
+var assert = require('assert')
 
 var readFile = Q.nfbind(fs.readFile)
 var writeFile = Q.nfbind(fs.writeFile)
@@ -25,20 +26,13 @@ module.exports = function(config) {
   }
 
   function checkConfig() {
-    return checkUserConfig()
-      .then(checkPubring)
-      .then(checkSecring)
-      .then(function() {
-        return {
-          result: true
-        }
-      })
-      .catch(function(error) {
-        return {
-          result: false,
-          error: error
-        }
-      })
+    return Q.Promise(function(resolve, reject) {
+      checkUserConfig()
+        .then(checkPubring)
+        .then(checkSecring)
+        .then(resolve)
+        .catch(reject)
+    })
   }
 
   function checkUserConfig() {
