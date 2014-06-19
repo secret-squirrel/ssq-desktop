@@ -121,4 +121,4 @@ gulp.task('watch', function() {
 })
 
 gulp.task('build', ['html', 'scripts', 'styles', 'vendor', 'other'])
-gulp.task('default', ['build', 'test', 'watch'])
+gulp.task('default', ['build', 'watch'])
