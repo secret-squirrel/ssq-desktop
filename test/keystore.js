@@ -5,9 +5,9 @@ var mkdirp = require('mkdirp')
 
 describe('keystore', function() {
   var config = {
-      userConfigDir: path.join(__dirname, '../../tmp/config')
+      userConfigDir: path.join(__dirname, '../tmp/config')
     }
-  var keystore = require(path.join(__dirname, '../../src/js/lib/keystore'))(config)
+  var keystore = require(path.join(__dirname, '../src/js/lib/keystore'))(config)
 
   var userId = 'test user <test@example.com>'
   var userConfig = {
@@ -15,8 +15,8 @@ describe('keystore', function() {
     userId: userId
   }
 
-  var privateKey = fs.readFileSync(path.join(__dirname, '../fixtures/data/private-key.asc'))
-  var publicKey = fs.readFileSync(path.join(__dirname, '../fixtures/data/public-key.asc'))
+  var privateKey = fs.readFileSync(path.join(__dirname, './fixtures/data/private-key.asc'))
+  var publicKey = fs.readFileSync(path.join(__dirname, './fixtures/data/public-key.asc'))
 
   var configFile = path.join(config.userConfigDir, 'config.json')
   var pubringFile = path.join(config.userConfigDir, 'pubring.json')
