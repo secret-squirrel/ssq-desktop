@@ -102,7 +102,7 @@ gulp.task('other', function() {
 
 gulp.task('test', function() {
   return gulp.src(['test/**/*.js'], { read: false })
-    .pipe(mocha({ reporter: 'list' }))
+    .pipe(mocha({ reporter: 'dot' }))
     .on('error', gutil.log)
 })
 
