@@ -1,6 +1,7 @@
 var fs = require('fs')
 var path = require('path')
 var rimraf = require('rimraf')
+var mkdirp = require('mkdirp')
 
 describe('keystore', function() {
   var config = {
@@ -22,7 +23,7 @@ describe('keystore', function() {
   var secringFile = path.join(config.userConfigDir, 'secring.json')
 
   beforeEach(function() {
-    fs.mkdirSync(config.userConfigDir)
+    mkdirp.sync(config.userConfigDir)
     fs.writeFileSync(configFile, JSON.stringify(userConfig))
     fs.writeFileSync(pubringFile, [publicKey])
     fs.writeFileSync(secringFile, [privateKey])
