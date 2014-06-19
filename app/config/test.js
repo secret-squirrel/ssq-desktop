@@ -1,3 +1,0 @@
-if(window.ENV == 'test') {
-
-};
