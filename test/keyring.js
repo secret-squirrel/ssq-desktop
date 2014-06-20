@@ -9,7 +9,7 @@ describe('keyring', function() {
   var config = {
       userConfigDir: path.join(__dirname, '../tmp/config')
     }
-  var keystore = require('../cli/keystore')(config)
+  var keystore = require('../src/js/lib/keystore')(config)
   var keyring
 
   before(function() {

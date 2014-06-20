@@ -1,10 +1,10 @@
 var Q = require('Q')
 var path = require('path')
-var fs = require('fs')
+var fs = require('fs.extra')
 var assert = require('assert')
+var mkdirp = require('mkdirp')
 
 var readFile = Q.nfbind(fs.readFile)
-var writeFile = Q.nfbind(fs.writeFile)
 
 module.exports = function(config) {
   var configDir = config.userConfigDir
@@ -65,6 +65,13 @@ module.exports = function(config) {
       .catch(function(error) {
         throw 'Checking secring failed: ' + error
       })
+  }
+
+  function writeFile(filename, data, options) {
+    return Q.nfcall(fs.mkdirp, configDir)
+    .then(function() {
+      return Q.nfcall(fs.writeFile, filename, data, options)
+    })
   }
 
   return {

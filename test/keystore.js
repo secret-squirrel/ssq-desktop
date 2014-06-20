@@ -1,7 +1,6 @@
-var fs = require('fs')
+var fs = require('fs.extra')
 var path = require('path')
-var rimraf = require('rimraf')
-var mkdirp = require('mkdirp')
+var keypair = require('./fixtures/keypair')
 
 describe('keystore', function() {
   var config = {
@@ -15,22 +14,22 @@ describe('keystore', function() {
     userId: userId
   }
 
-  var privateKey = fs.readFileSync(path.join(__dirname, './fixtures/data/private-key.asc'))
-  var publicKey = fs.readFileSync(path.join(__dirname, './fixtures/data/public-key.asc'))
+  var privateKey = JSON.stringify([keypair.privateKeyEncrypted.armor()])
+  var publicKey = JSON.stringify([keypair.publicKey.armor()])
 
   var configFile = path.join(config.userConfigDir, 'config.json')
   var pubringFile = path.join(config.userConfigDir, 'pubring.json')
   var secringFile = path.join(config.userConfigDir, 'secring.json')
 
   beforeEach(function() {
-    mkdirp.sync(config.userConfigDir)
+    fs.mkdirpSync(config.userConfigDir)
     fs.writeFileSync(configFile, JSON.stringify(userConfig))
     fs.writeFileSync(pubringFile, [publicKey])
     fs.writeFileSync(secringFile, [privateKey])
   })
 
   afterEach(function() {
-    rimraf.sync(config.userConfigDir)
+    fs.rmrfSync(config.userConfigDir)
   })
 
   describe('checkConfig', function() {
@@ -52,5 +51,45 @@ describe('keystore', function() {
       fs.unlinkSync(pubringFile)
       assert.isRejected(keystore.checkConfig()).notify(done)
     })
+  })
+
+  it('stores private key data', function() {
+    var promise = keystore.storePrivate(privateKey)
+    .then(function() {
+      return fs.existsSync(path.join(config.userConfigDir, 'secring.json'))
+    })
+
+    assert.eventually.equal(promise, true)
+  })
+
+  it('loads private key data', function() {
+    var promise = keystore.storePrivate(privateKey).then(keystore.loadPrivate)
+    return assert.eventually.equal(promise, privateKey)
+  })
+
+  it('stores public keys', function() {
+    var promise = keystore.storePublic(publicKey)
+    .then(function() {
+      return fs.existsSync(path.join(config.userConfigDir, 'pubring.json'))
+    })
+
+    return assert.eventually.equal(promise, true)
+  })
+
+  it('loads public keys', function() {
+    var promise = keystore.storePublic(publicKey)
+    .then(keystore.loadPublic)
+
+    return assert.eventually.equal(promise, publicKey)
+  })
+
+  it('creates the configuration dir if necessary', function() {
+    fs.rmrfSync(config.userConfigDir)
+    var promise = keystore.storePublic(publicKey)
+    .then(function() {
+      return fs.existsSync(path.join(config.userConfigDir, 'pubring.json'))
+    })
+
+    return assert.eventually.equal(promise, true)
   })
 })
