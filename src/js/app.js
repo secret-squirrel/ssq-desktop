@@ -9,6 +9,7 @@ var ssqApp = angular.module('ssqApp', [
   'baseControllers',
   'setupControllers',
   'keyringControllers',
+  'loginsControllers',
   'services'
 ])
 
@@ -38,6 +39,10 @@ ssqApp.config(
       when('/keyring/generate', {
         templateUrl: 'partials/keyring/generate.html',
         controller: 'KeyringGenerateCtrl'
+      }).
+      when('/logins', {
+        templateUrl: 'partials/logins/index.html',
+        controller: 'LoginsCtrl'
       }).
       otherwise({
         redirectTo: '/base'
