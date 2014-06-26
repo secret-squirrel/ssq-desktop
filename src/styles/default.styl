@@ -1,9 +1,12 @@
 .login-list
   margin-top 10px
   padding 0
-
-.login-list .login-item
-  padding 10px
-
-.login-item.selected
-  background-color #d3d3d3
+  .login-item
+    padding 10px
+    cursor pointer
+    &:hover 
+      background-color #f3f3f3
+    &.selected
+      background-color #d3d3d3
+      &:hover 
+        background-color #d3d3d3

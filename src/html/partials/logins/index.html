@@ -7,35 +7,17 @@
 </form>
 
 <div class="login-list col-md-6">
-  <div class="login-item selected">
-    <h3>AWS <small>https://aws.amazon.com</small></h3>
+  <div ng-repeat="login in logins" class="login-item" ng-click='select(login)' ng-class="{selected: selected.id==login.id}">
+    <h3>{{login.name}} <small>{{login.url}}</small></h3>
     <p>
-      EC2 and S3 Configured, billed to company credit card.
-    </p>
-  </div>
-  <div class="login-item">
-    <h3>Engineyard <small>http://engineyard.com</small></h3>
-    <p>
-      Rails hosting for clients
-    </p>
-  </div>
-  <div class="login-item">
-    <h3>Linode <small>http://linode.com</small></h3>
-    <p>
-      Legacy Rails hosting
+      {{login.notes}}
     </p>
   </div>
 </div>
 
-<div class="col-md-6">
-  <dl class="dl-horizontal">
-    <dt>Login Email<dt>
-    <dd>user@example.com</dd>
-    <dt>Login Password<dt>
-    <dd>*********</dd>
-    <dt>Access Key ID<dt>
-    <dd>*********</dd>
-    <dt>Secret Access Key<dt>
-    <dd>*********</dd>
+<div class="col-md-6" ng-if="selected">
+  <dl ng-repeat="secret in selected.secrets" class="dl-horizontal">
+    <dt>{{secret.label}}</dt>
+    <dd>**********</dt>
   </dl>
 </div>
