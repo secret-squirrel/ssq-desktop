@@ -117,7 +117,6 @@ gulp.task('watch', function() {
   gulp.watch(paths.vendor, ['vendor'])
   gulp.watch(paths.other, ['other'])
   gulp.watch(paths.styles, ['styles'])
-  gulp.watch(['src/**', 'test/**'], ['test'])
 })
 
 gulp.task('build', ['html', 'scripts', 'styles', 'vendor', 'other'])
